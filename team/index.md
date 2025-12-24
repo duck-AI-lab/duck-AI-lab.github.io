@@ -40,16 +40,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-{% endcomment %}
 
 
 {% include section.html %}
+{% endcomment %}
 
 {% capture content %}
 
+{% comment %}
+
 {% include figure.html image="images/photo.jpg" %}
 {% include figure.html image="images/photo.jpg" %}
 {% include figure.html image="images/photo.jpg" %}
+{% endcomment %}
 
 {% endcapture %}
 
