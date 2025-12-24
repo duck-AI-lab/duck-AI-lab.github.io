@@ -13,9 +13,12 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 {% include section.html %}
 
-[//]: # ({% include list.html data="members" component="portrait" filter="role == 'pi'" %})
+{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
 
-[//]: # ({% include list.html data="members" component="portrait" filter="role != 'pi'" %})
+{% comment %}
+{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
+{% include list.html data="members" component="portrait" filter="role != 'pi'" %}
+{% endcomment %}
 
 
 ## Principal Investigator
@@ -28,8 +31,10 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% include list.html data="members" component="portrait" filter="role == 'phd'" %}
 
 
+{% comment %}
+{% include section.html background="images/background.jpg" dark=true %}
+{% endcomment %}
 
-[//]: # ({% include section.html background="images/background.jpg" dark=true %})
 {% include section.html background="#e6f7ff" dark=false %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
