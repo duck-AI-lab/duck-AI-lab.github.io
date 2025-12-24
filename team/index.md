@@ -36,9 +36,6 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 {% comment %}
 {% include section.html background="images/background.jpg" dark=true %}
-{% endcomment %}
-
-{% include section.html style="background-color: #e6f7ff;" dark=true %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -48,12 +45,12 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 {% capture content %}
 
-{% comment %}
 {% include figure.html image="images/photo.jpg" %}
 {% include figure.html image="images/photo.jpg" %}
 {% include figure.html image="images/photo.jpg" %}
 {% endcomment %}
 
 {% endcapture %}
+{% endcomment %}
 
 {% include grid.html style="square" content=content %}
