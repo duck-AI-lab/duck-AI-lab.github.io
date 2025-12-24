@@ -1,29 +1,45 @@
 <div class="member-bio-container">
 
   <div class="member-profile-card">
-
-    {% if include.image %}
-      <img
-        src="{{ include.image | relative_url }}"
-        alt="{{ include.name }}"
-        class="member-photo"
-      >
-    {% endif %}
-
-    {% if include.name %}
-      <h3 class="member-name">{{ include.name }}</h3>
-    {% endif %}
-
-    {% if include.role or include.affiliation %}
-      <div class="member-details">
-        <span class="member-role">{{ include.role | capitalize }}</span>
-        {% if include.affiliation %}
-          <br><span class="member-org">{{ include.affiliation }}</span>
+    <a
+        {% if page.slug != member.slug %}
+          href="{{ member.url | relative_url | uri_escape }}"
         {% endif %}
-      </div>
-    {% endif %}
+        class="portrait"
+        data-style="{{ include.style }}"
+        aria-label="{{ member.name | default: "member link" | regex_strip }}"
+      >
+        {% if type %}
+          {% include icon.html icon=type.icon %}
+        {% endif %}
 
-    </div>
+        <img
+          src="{{ member.image | relative_url | uri_escape }}"
+          class="portrait-image"
+          alt="member portrait"
+          loading="lazy"
+          {% include fallback.html %}
+        >
+
+        {% if member.name %}
+          <span class="portrait-name">
+            {{ member.name }}
+          </span>
+        {% endif %}
+
+        {% if member.description or type %}
+          <span class="portrait-description">
+            {{ member.description | default: type.description }}
+          </span>
+        {% endif %}
+
+        {% if member.affiliation %}
+          <span class="portrait-affiliation">
+            {{ member.affiliation }}
+          </span>
+        {% endif %}
+    </a>
+  </div>
 
   <div class="member-biography">
     {% if include.content %}
