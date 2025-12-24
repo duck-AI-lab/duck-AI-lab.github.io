@@ -7,15 +7,15 @@ principal-investigator:
   description: Principal Investigator
 
 postdoc:
-#  icon: fa-solid fa-glasses
+#  icon: fa-solid fa-microscope
   description: Postdoctoral Researcher
 
 phd:
-#  icon: fa-solid fa-graduation-cap
+#  icon: fa-solid fa-microscope
   description: PhD Student
 
 undergrad:
-#  icon: fa-solid fa-user-graduate
+#  icon: fa-solid fa-microscope
   description: Undergraduate Student
 
 programmer:
