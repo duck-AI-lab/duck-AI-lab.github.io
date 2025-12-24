@@ -20,9 +20,8 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% comment %}
 {% include list.html data="members" component="portrait" filter="role == 'pi'" %}
 {% include list.html data="members" component="portrait" filter="role != 'pi'" %}
-{% endcomment %}
 
-
+{% comment %}
 ## Principal Investigator
 {% include list.html data="members" component="portrait" filter="role == 'professor'" %}
 
@@ -31,6 +30,17 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ## PhD Students
 {% include list.html data="members" component="portrait" filter="role == 'phd'" %}
+{% endcomment %}
+
+
+## Principal Investigator
+{% include list.html data="members" component="member-bio" filter="role == 'pi'" %}
+
+## Postdoctoral Researchers
+{% include list.html data="members" component="member-bio" filter="role == 'postdoc'" %}
+
+## PhD Students
+{% include list.html data="members" component="member-bio" filter="role == 'phd'" %}
 
 
 {% comment %}

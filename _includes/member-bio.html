@@ -1,0 +1,25 @@
+<div class="row mb-5 align-items-center">
+  <div class="col-md-3 text-center">
+    <img src="{{ include.item.image | relative_url }}" 
+         alt="{{ include.item.name }}" 
+         class="img-fluid rounded-circle shadow-sm" 
+         style="max-width: 150px; height: auto;">
+  </div>
+  
+  <div class="col-md-9">
+    <h3 class="mb-1">{{ include.item.name }}</h3>
+    <p class="text-muted mb-3"><i>{{ include.item.role }}</i></p>
+    
+    <div class="member-bio">
+      {{ include.item.description | markdownify }}
+    </div>
+    
+    {% if include.item.email %}
+      <a href="mailto:{{ include.item.email }}" class="mr-2"><i class="fas fa-envelope"></i> Email</a>
+    {% endif %}
+    {% if include.item.website %}
+      <a href="{{ include.item.website }}" target="_blank"><i class="fas fa-globe"></i> Website</a>
+    {% endif %}
+  </div>
+</div>
+<hr>

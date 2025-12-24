@@ -1,5 +1,5 @@
 ---
-name: Sarah Johnson
+name: Clara Jensen
 image: images/photo.jpg
 description: Test description 2
 role: postdoc
