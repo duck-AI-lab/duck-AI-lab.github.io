@@ -19,7 +19,7 @@
       {% endif %}
 
         <img
-          src="{{ member.image | relative_url }}"
+          src="{{ member.image | relative_url | uri_escape }}"
           alt="{{ member.name }}"
           class="member-photo"
         >
@@ -81,7 +81,10 @@
   /* Left Column (Photo & Info) */
   .member-profile-card {
     flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+      align-items: center; /* This forces the content to be perfectly centered */
   }
 
   .member-photo {
