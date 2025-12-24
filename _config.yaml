@@ -1,19 +1,29 @@
 # site properties and page defaults
-title: duck-AI-lab
+title: DUCK LAB
 subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+description:  description of  lab
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
+
+# REPO SETTINGS
+# crucial: this must match "Org/Repo" exactly
+repository: duck-AI-lab/duck-AI-lab.github.io
+
+# URL SETTINGS
+# crucial: baseurl must be empty quotes "" for an organisation root site
+url: "https://duck-AI-lab.github.io"
+baseurl: ""
+
 # site social media and other links
 links:
-  email: contact@duck-AI-lab.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
+  email: e.giunchiglia@ic.ac.uk
+#  orcid: 0000-0001-8713-9213
+#  google-scholar: ETJoidYAAAAJ
   github: duck-AI-lab
   twitter: duck-AI-lab
-  youtube: duck-AI-lab
+#  youtube: duck-AI-lab
 
 ### jekyll settings
 
