@@ -587,21 +587,12 @@ Magna eget est lorem ipsum.</p>
   .member-bio-container {
     display: flex;
     gap: 2rem;
-
-    /* Spacing adjustments for Zebra Striping */
-    padding: 2rem;       /* Adds breathing room inside the color block */
-    margin-bottom: 0;    /* Remove huge gaps between rows so they stack nicely */
-    border-radius: 12px; /* Optional: Rounds the corners for a modern look */
-
-    /* border-bottom: 1px solid #eee; <-- REMOVED */
-
+    /*margin-bottom: 4rem;*/
+    /*padding-bottom: 2rem;*/
+      margin-bottom: 2rem; /* Reduced from 4rem */
+    padding-bottom: 0;   /* Reduced from 2rem */
+    /*border-bottom: 1px solid #eee;*/
     align-items: flex-start;
-  }
-
-  /* ZEBRA STRIPING MAGIC */
-  /* This targets every "even" numbered member (2nd, 4th, 6th...) */
-  .member-bio-container:nth-of-type(even) {
-    background-color: #f8f9fa; /* A very light, soft gray */
   }
 
   /* Left Column (Photo & Info) */
@@ -609,8 +600,8 @@ Magna eget est lorem ipsum.</p>
     flex: 0 0 220px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+      align-items: center; /* This forces the content to be perfectly centered */
   }
 
   .member-photo {
@@ -620,10 +611,10 @@ Magna eget est lorem ipsum.</p>
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    background-color: #fff; /* Ensures photo has white bg if transparent */
+    transition: transform 0.2s; /* Subtle zoom effect on hover */
   }
 
+  /* Hover effect for linked photo */
   a:hover .member-photo {
     transform: scale(1.05);
   }
@@ -633,29 +624,22 @@ Magna eget est lorem ipsum.</p>
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    text-align: center !important;
-    width: 100%;
   }
 
+  /* Link Styles */
   .member-link {
     text-decoration: none;
     color: inherit;
-    display: block;
-    text-align: center;
-    width: 100%;
   }
-
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #0056b3; /* Optional: Change color on hover */
   }
 
   .member-details {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
-    text-align: center;
-    width: 100%;
   }
 
   /* Right Column (Bio Text) */
@@ -671,6 +655,7 @@ Magna eget est lorem ipsum.</p>
       align-items: center;
       text-align: center;
     }
+
     .member-biography {
       text-align: left;
     }
@@ -733,21 +718,12 @@ Magna eget est lorem ipsum.</p>
   .member-bio-container {
     display: flex;
     gap: 2rem;
-
-    /* Spacing adjustments for Zebra Striping */
-    padding: 2rem;       /* Adds breathing room inside the color block */
-    margin-bottom: 0;    /* Remove huge gaps between rows so they stack nicely */
-    border-radius: 12px; /* Optional: Rounds the corners for a modern look */
-
-    /* border-bottom: 1px solid #eee; <-- REMOVED */
-
+    /*margin-bottom: 4rem;*/
+    /*padding-bottom: 2rem;*/
+      margin-bottom: 2rem; /* Reduced from 4rem */
+    padding-bottom: 0;   /* Reduced from 2rem */
+    /*border-bottom: 1px solid #eee;*/
     align-items: flex-start;
-  }
-
-  /* ZEBRA STRIPING MAGIC */
-  /* This targets every "even" numbered member (2nd, 4th, 6th...) */
-  .member-bio-container:nth-of-type(even) {
-    background-color: #f8f9fa; /* A very light, soft gray */
   }
 
   /* Left Column (Photo & Info) */
@@ -755,8 +731,8 @@ Magna eget est lorem ipsum.</p>
     flex: 0 0 220px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+      align-items: center; /* This forces the content to be perfectly centered */
   }
 
   .member-photo {
@@ -766,10 +742,10 @@ Magna eget est lorem ipsum.</p>
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    background-color: #fff; /* Ensures photo has white bg if transparent */
+    transition: transform 0.2s; /* Subtle zoom effect on hover */
   }
 
+  /* Hover effect for linked photo */
   a:hover .member-photo {
     transform: scale(1.05);
   }
@@ -779,29 +755,22 @@ Magna eget est lorem ipsum.</p>
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    text-align: center !important;
-    width: 100%;
   }
 
+  /* Link Styles */
   .member-link {
     text-decoration: none;
     color: inherit;
-    display: block;
-    text-align: center;
-    width: 100%;
   }
-
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #0056b3; /* Optional: Change color on hover */
   }
 
   .member-details {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
-    text-align: center;
-    width: 100%;
   }
 
   /* Right Column (Bio Text) */
@@ -817,6 +786,7 @@ Magna eget est lorem ipsum.</p>
       align-items: center;
       text-align: center;
     }
+
     .member-biography {
       text-align: left;
     }
@@ -877,21 +847,12 @@ Magna eget est lorem ipsum.</p>
   .member-bio-container {
     display: flex;
     gap: 2rem;
-
-    /* Spacing adjustments for Zebra Striping */
-    padding: 2rem;       /* Adds breathing room inside the color block */
-    margin-bottom: 0;    /* Remove huge gaps between rows so they stack nicely */
-    border-radius: 12px; /* Optional: Rounds the corners for a modern look */
-
-    /* border-bottom: 1px solid #eee; <-- REMOVED */
-
+    /*margin-bottom: 4rem;*/
+    /*padding-bottom: 2rem;*/
+      margin-bottom: 2rem; /* Reduced from 4rem */
+    padding-bottom: 0;   /* Reduced from 2rem */
+    /*border-bottom: 1px solid #eee;*/
     align-items: flex-start;
-  }
-
-  /* ZEBRA STRIPING MAGIC */
-  /* This targets every "even" numbered member (2nd, 4th, 6th...) */
-  .member-bio-container:nth-of-type(even) {
-    background-color: #f8f9fa; /* A very light, soft gray */
   }
 
   /* Left Column (Photo & Info) */
@@ -899,8 +860,8 @@ Magna eget est lorem ipsum.</p>
     flex: 0 0 220px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+      align-items: center; /* This forces the content to be perfectly centered */
   }
 
   .member-photo {
@@ -910,10 +871,10 @@ Magna eget est lorem ipsum.</p>
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    background-color: #fff; /* Ensures photo has white bg if transparent */
+    transition: transform 0.2s; /* Subtle zoom effect on hover */
   }
 
+  /* Hover effect for linked photo */
   a:hover .member-photo {
     transform: scale(1.05);
   }
@@ -923,29 +884,22 @@ Magna eget est lorem ipsum.</p>
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    text-align: center !important;
-    width: 100%;
   }
 
+  /* Link Styles */
   .member-link {
     text-decoration: none;
     color: inherit;
-    display: block;
-    text-align: center;
-    width: 100%;
   }
-
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #0056b3; /* Optional: Change color on hover */
   }
 
   .member-details {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
-    text-align: center;
-    width: 100%;
   }
 
   /* Right Column (Bio Text) */
@@ -961,6 +915,7 @@ Magna eget est lorem ipsum.</p>
       align-items: center;
       text-align: center;
     }
+
     .member-biography {
       text-align: left;
     }
@@ -1023,21 +978,12 @@ Magna eget est lorem ipsum.</p>
   .member-bio-container {
     display: flex;
     gap: 2rem;
-
-    /* Spacing adjustments for Zebra Striping */
-    padding: 2rem;       /* Adds breathing room inside the color block */
-    margin-bottom: 0;    /* Remove huge gaps between rows so they stack nicely */
-    border-radius: 12px; /* Optional: Rounds the corners for a modern look */
-
-    /* border-bottom: 1px solid #eee; <-- REMOVED */
-
+    /*margin-bottom: 4rem;*/
+    /*padding-bottom: 2rem;*/
+      margin-bottom: 2rem; /* Reduced from 4rem */
+    padding-bottom: 0;   /* Reduced from 2rem */
+    /*border-bottom: 1px solid #eee;*/
     align-items: flex-start;
-  }
-
-  /* ZEBRA STRIPING MAGIC */
-  /* This targets every "even" numbered member (2nd, 4th, 6th...) */
-  .member-bio-container:nth-of-type(even) {
-    background-color: #f8f9fa; /* A very light, soft gray */
   }
 
   /* Left Column (Photo & Info) */
@@ -1045,8 +991,8 @@ Magna eget est lorem ipsum.</p>
     flex: 0 0 220px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+      align-items: center; /* This forces the content to be perfectly centered */
   }
 
   .member-photo {
@@ -1056,10 +1002,10 @@ Magna eget est lorem ipsum.</p>
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    background-color: #fff; /* Ensures photo has white bg if transparent */
+    transition: transform 0.2s; /* Subtle zoom effect on hover */
   }
 
+  /* Hover effect for linked photo */
   a:hover .member-photo {
     transform: scale(1.05);
   }
@@ -1069,29 +1015,22 @@ Magna eget est lorem ipsum.</p>
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
-    text-align: center !important;
-    width: 100%;
   }
 
+  /* Link Styles */
   .member-link {
     text-decoration: none;
     color: inherit;
-    display: block;
-    text-align: center;
-    width: 100%;
   }
-
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #0056b3; /* Optional: Change color on hover */
   }
 
   .member-details {
     font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
-    text-align: center;
-    width: 100%;
   }
 
   /* Right Column (Bio Text) */
@@ -1107,6 +1046,7 @@ Magna eget est lorem ipsum.</p>
       align-items: center;
       text-align: center;
     }
+
     .member-biography {
       text-align: left;
     }
