@@ -1,51 +1,49 @@
+{% if include.lookup %}
+  {% assign member = site.members
+    | where_exp: "member", "member.slug == include.lookup"
+    | first
+  %}
+{% else %}
+  {% assign member = include %}
+{% endif %}
+
+{% assign type = site.data.types[member.role] %}
+
 <div class="member-bio-container">
 
   <div class="member-profile-card">
-    <a
-        {% if page.slug != member.slug %}
-          href="{{ member.url | relative_url | uri_escape }}"
-        {% endif %}
-        class="portrait"
-        data-style="{{ include.style }}"
-        aria-label="{{ member.name | default: "member link" | regex_strip }}"
+
+    {% if member.image %}
+      <img
+        src="{{ member.image | relative_url }}"
+        alt="{{ member.name }}"
+        class="member-photo"
       >
-        {% if type %}
-          {% include icon.html icon=type.icon %}
-        {% endif %}
+    {% endif %}
 
-        <img
-          src="{{ member.image | relative_url | uri_escape }}"
-          class="portrait-image"
-          alt="member portrait"
-          loading="lazy"
-          {% include fallback.html %}
-        >
+    {% if member.name %}
+      <h3 class="member-name">{{ member.name }}</h3>
+    {% endif %}
 
-        {% if member.name %}
-          <span class="portrait-name">
-            {{ member.name }}
-          </span>
-        {% endif %}
-
-        {% if member.description or type %}
-          <span class="portrait-description">
-            {{ member.description | default: type.description }}
-          </span>
-        {% endif %}
+    {% if member.role or member.affiliation %}
+      <div class="member-details">
+        <span class="member-role">
+            {% if type.icon %}<i class="{{ type.icon }}"></i> {% endif %}
+            {{ member.role | capitalize }}
+        </span>
 
         {% if member.affiliation %}
-          <span class="portrait-affiliation">
-            {{ member.affiliation }}
-          </span>
+          <br><span class="member-org">{{ member.affiliation }}</span>
         {% endif %}
-    </a>
+      </div>
+    {% endif %}
   </div>
 
   <div class="member-biography">
-    {% if include.content %}
-      {{ include.content | markdownify }}
-    {% elsif include.description %}
-      {{ include.description | markdownify }}
+    {% if member.content %}
+      {{ member.content | markdownify }}
+    {% elsif member.description %}
+      {{ member.description | markdownify }}
     {% else %}
       <p><em>No biography available.</em></p>
     {% endif %}
@@ -57,24 +55,24 @@
   /* Main Flex Container */
   .member-bio-container {
     display: flex;
-    gap: 2rem; /* Space between photo and bio */
-    margin-bottom: 4rem; /* Space between this member and the next */
+    gap: 2rem;
+    margin-bottom: 4rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #eee; /* Optional divider line */
+    border-bottom: 1px solid #eee;
     align-items: flex-start;
   }
 
   /* Left Column (Photo & Info) */
   .member-profile-card {
-    flex: 0 0 220px; /* Fixed width for consistency */
+    flex: 0 0 220px;
     text-align: center;
   }
 
   .member-photo {
     width: 180px;
     height: 180px;
-    object-fit: cover; /* Ensures photo stays round/square without distortion */
-    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
@@ -94,20 +92,20 @@
 
   /* Right Column (Bio Text) */
   .member-biography {
-    flex: 1; /* Takes up remaining space */
+    flex: 1;
     text-align: justify;
   }
 
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .member-bio-container {
-      flex-direction: column; /* Stack vertically on phones */
+      flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
     .member-biography {
-      text-align: left; /* Keep bio readable on mobile */
+      text-align: left;
     }
   }
 </style>
