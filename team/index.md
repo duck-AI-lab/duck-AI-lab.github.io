@@ -20,6 +20,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% comment %}
 {% include list.html data="members" component="portrait" filter="role == 'pi'" %}
 {% include list.html data="members" component="portrait" filter="role != 'pi'" %}
+{% endcomment %}
 
 {% comment %}
 ## Principal Investigator
