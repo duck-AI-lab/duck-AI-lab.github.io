@@ -21,10 +21,7 @@
 
   {% for d in data %}
     {% assign style = d.style | default: include.style %}
-{% comment %}
-   CRITICAL: The line below must touch the left edge.
-   NO spaces before {%- include
-{% endcomment %}
+
 {%- include {{ include.component | append: ".html" }}
       affiliation=d.affiliation
       author=d.author
