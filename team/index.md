@@ -35,7 +35,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 
 ## Principal Investigator
-{% include list.html data="members" component="member-bio" filter="role == 'pi'" %}
+{% include list.html data="members" component="member-bio" filter="role == 'professor'" %}
 
 ## Postdoctoral Researchers
 {% include list.html data="members" component="member-bio" filter="role == 'postdoc'" %}
