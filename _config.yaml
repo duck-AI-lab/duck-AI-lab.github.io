@@ -2,8 +2,8 @@
 title: DUCK LAB
 subtitle: 
 description:  description of  lab
-header: images/background.jpg
-footer: images/background.jpg
+#header: images/background.jpg
+#footer: images/background.jpg
 proofer: false
 
 
