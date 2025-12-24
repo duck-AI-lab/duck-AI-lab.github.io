@@ -1,8 +1,9 @@
 ---
 name: Jane Smith
 image: images/photo.jpg
-role: principal-investigator
+role: professor
 affiliation: University of Colorado
+description: Test description 1
 aliases:
   - J. Smith
   - J Smith

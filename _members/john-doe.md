@@ -3,6 +3,7 @@ name: John Doe
 image: images/photo.jpg
 role: phd
 group: alum
+description: Test description 3
 links:
   github: john-doe
 ---

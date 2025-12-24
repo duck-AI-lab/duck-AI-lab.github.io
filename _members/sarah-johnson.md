@@ -1,8 +1,8 @@
 ---
 name: Sarah Johnson
 image: images/photo.jpg
-description: Lead Programmer
-role: programmer
+description: Test description 2
+role: postdoc
 links:
   email: sarah.johnson@gmail.com
   twitter: sarahjohnson
