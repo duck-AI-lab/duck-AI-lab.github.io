@@ -14,15 +14,31 @@
   <div class="member-profile-card">
 
     {% if member.image %}
-      <img
-        src="{{ member.image | relative_url }}"
-        alt="{{ member.name }}"
-        class="member-photo"
-      >
+      {% if page.slug != member.slug %}
+        <a href="{{ member.url | relative_url | uri_escape }}" aria-label="{{ member.name }}">
+      {% endif %}
+
+        <img
+          src="{{ member.image | relative_url }}"
+          alt="{{ member.name }}"
+          class="member-photo"
+        >
+
+      {% if page.slug != member.slug %}
+        </a>
+      {% endif %}
     {% endif %}
 
     {% if member.name %}
-      <h3 class="member-name">{{ member.name }}</h3>
+      {% if page.slug != member.slug %}
+        <a href="{{ member.url | relative_url | uri_escape }}" class="member-link">
+      {% endif %}
+
+        <h3 class="member-name">{{ member.name }}</h3>
+
+      {% if page.slug != member.slug %}
+        </a>
+      {% endif %}
     {% endif %}
 
     {% if member.role or member.affiliation %}
@@ -75,6 +91,12 @@
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s; /* Subtle zoom effect on hover */
+  }
+
+  /* Hover effect for linked photo */
+  a:hover .member-photo {
+    transform: scale(1.05);
   }
 
   .member-name {
@@ -82,6 +104,16 @@
     margin-bottom: 0.25rem;
     font-size: 1.25rem;
     font-weight: 700;
+  }
+
+  /* Link Styles */
+  .member-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .member-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Optional: Change color on hover */
   }
 
   .member-details {
