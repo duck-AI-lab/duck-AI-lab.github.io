@@ -1,37 +1,35 @@
-<div class="member-bio-wrapper" style="display: flex; gap: 30px; margin-bottom: 60px; align-items: flex-start;">
+<div class="member-bio-container">
 
-  <div class="member-profile" style="flex: 0 0 200px; text-align: center;">
+  <div class="member-profile-card">
 
     {% if include.image %}
       <img
         src="{{ include.image | relative_url }}"
         alt="{{ include.name }}"
-        style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 15px;"
+        class="member-photo"
       >
     {% endif %}
 
     {% if include.name %}
-      <h4 style="margin: 0; font-size: 1.2rem; font-weight: bold;">
-        {{ include.name }}
-      </h4>
+      <h3 class="member-name">{{ include.name }}</h3>
     {% endif %}
 
     {% if include.role or include.affiliation %}
-      <div style="font-size: 0.9rem; color: #666; margin-top: 5px; line-height: 1.2;">
-        {{ include.role | capitalize }}
+      <div class="member-details">
+        <span class="member-role">{{ include.role | capitalize }}</span>
         {% if include.affiliation %}
-          <br><small>{{ include.affiliation }}</small>
+          <br><span class="member-org">{{ include.affiliation }}</span>
         {% endif %}
       </div>
     {% endif %}
 
     </div>
 
-  <div class="member-bio-text" style="flex: 1;">
-    {% if include.description %}
+  <div class="member-biography">
+    {% if include.content %}
+      {{ include.content | markdownify }}
+    {% elsif include.description %}
       {{ include.description | markdownify }}
-    {% elsif include.text %}
-      {{ include.text | markdownify }}
     {% else %}
       <p><em>No biography available.</em></p>
     {% endif %}
@@ -40,14 +38,60 @@
 </div>
 
 <style>
+  /* Main Flex Container */
+  .member-bio-container {
+    display: flex;
+    gap: 2rem; /* Space between photo and bio */
+    margin-bottom: 4rem; /* Space between this member and the next */
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee; /* Optional divider line */
+    align-items: flex-start;
+  }
+
+  /* Left Column (Photo & Info) */
+  .member-profile-card {
+    flex: 0 0 220px; /* Fixed width for consistency */
+    text-align: center;
+  }
+
+  .member-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover; /* Ensures photo stays round/square without distortion */
+    border-radius: 50%; /* Makes it circular */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .member-name {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .member-details {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* Right Column (Bio Text) */
+  .member-biography {
+    flex: 1; /* Takes up remaining space */
+    text-align: justify;
+  }
+
+  /* Mobile Responsiveness */
   @media (max-width: 768px) {
-    .member-bio-wrapper {
-      flex-direction: column;
+    .member-bio-container {
+      flex-direction: column; /* Stack vertically on phones */
       align-items: center;
       text-align: center;
     }
-    .member-profile {
-      margin-bottom: 20px;
+
+    .member-biography {
+      text-align: left; /* Keep bio readable on mobile */
     }
   }
 </style>
