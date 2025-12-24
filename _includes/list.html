@@ -15,15 +15,14 @@
   {% assign data = year.items %}
 
   {% if years.size > 1 %}
-    {{--}}<h3 id="{{ year.name }}">{{ year.name }}</h3>
+    <h3 id="{{ year.name }}">{{ year.name }}</h3>
     {% assign data = data | sort: "date" | reverse %}
   {% endif %}
 
   {% for d in data %}
     {% assign style = d.style | default: include.style %}
 
-    {%-
-      include {{ include.component | append: ".html" }}
+    {%- include {{ include.component | append: ".html" }}
       affiliation=d.affiliation
       author=d.author
       authors=d.authors
