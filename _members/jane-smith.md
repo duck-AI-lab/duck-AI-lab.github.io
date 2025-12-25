@@ -3,7 +3,7 @@ name: Jane Smith
 image: images/photo.jpg
 role: professor
 #affiliation: Imperial
-description: Test description 1
+description: Assistant Professor
 links:
   home-page: https://janesmith.com
   orcid: 0000-0001-8713-9213
