@@ -1,3 +1,4 @@
+{% comment %} --- LOGIC SECTION --- {% endcomment %}
 {% if include.lookup %}
   {% assign member = site.members | where_exp: "m", "m.slug == include.lookup" | first %}
 {% elsif include.member %}
@@ -8,14 +9,25 @@
 
 {% assign type = site.data.types[member.role] %}
 
+{% comment %} --- LINK CALCULATION ---
+  1. Priority: External Homepage
+  2. Fallback: Internal Member URL (only if we aren't currently on that page)
+{% endcomment %}
+{% assign click_url = nil %}
+{% if member.homepage %}
+  {% assign click_url = member.homepage %}
+{% elsif member.url and page.slug != member.slug %}
+  {% assign click_url = member.url | relative_url | uri_escape %}
+{% endif %}
+
 <div class="member-bio-container">
 
   <div class="member-profile-card">
 
-      {% comment %}
+    {% comment %} --- IMAGE SECTION --- {% endcomment %}
     {% if member.image %}
-      {% if page.slug != member.slug %}
-        <a href="{{ member.url | relative_url | uri_escape }}" aria-label="{{ member.name }}">
+      {% if click_url %}
+        <a href="{{ click_url }}" aria-label="{{ member.name }}" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
       {% endif %}
 
         <img
@@ -24,42 +36,33 @@
           class="member-photo"
         >
 
-      {% if page.slug != member.slug %}
+      {% if click_url %}
         </a>
       {% endif %}
     {% endif %}
-    {% endcomment %}
 
-       <a href="{{ member.homepage }}" aria-label="{{ member.name }}">
-        <img
-          src="{{ member.image | relative_url | uri_escape }}"
-          alt="{{ member.name }}"
-          class="member-photo"
-        >
-        </a>
-
-
+    {% comment %} --- NAME SECTION --- {% endcomment %}
     {% if member.name %}
-      {% if page.slug != member.slug %}
-        <a href="{{ member.url | relative_url | uri_escape }}" class="member-link">
+      {% if click_url %}
+        <a href="{{ click_url }}" class="member-link" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
       {% endif %}
 
         <h3 class="member-name">{{ member.name }}</h3>
 
-      {% if page.slug != member.slug %}
+      {% if click_url %}
         </a>
       {% endif %}
     {% endif %}
 
-  {% if member.role or member.affiliation %}
-    <div class="member-details">
-      {% if member.affiliation %}
-        <br><span class="member-org">{{ member.affiliation }}</span>
-      {% endif %}
-    </div>
-  {% endif %}
+    {% if member.role or member.affiliation %}
+      <div class="member-details">
+        {% if member.affiliation %}
+          <br><span class="member-org">{{ member.affiliation }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
 
-</div>
   <div class="member-biography">
     {% if member.content %}
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
@@ -79,11 +82,8 @@
   .member-bio-container {
     display: flex;
     gap: 2rem;
-    /*margin-bottom: 4rem;*/
-    /*padding-bottom: 2rem;*/
-      margin-bottom: 2rem; /* Reduced from 4rem */
-    padding-bottom: 0;   /* Reduced from 2rem */
-    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 2rem;
+    padding-bottom: 0;
     align-items: flex-start;
   }
 
@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-      align-items: center; /* This forces the content to be perfectly centered */
+    align-items: center;
   }
 
   .member-photo {
@@ -103,12 +103,13 @@
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Subtle zoom effect on hover */
+    transition: transform 0.2s;
   }
 
-  /* Hover effect for linked photo */
+  /* Hover effect for linked photo - ensures it works on the <a> wrapper */
   a:hover .member-photo {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   .member-name {
@@ -125,7 +126,7 @@
   }
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3; /* Optional: Change color on hover */
+    color: #0056b3;
   }
 
   .member-details {
