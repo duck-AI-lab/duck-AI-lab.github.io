@@ -3,6 +3,7 @@ name: Clara Jensen
 image: images/photo.jpg
 description: Test description 2
 role: postdoc
+homepage: https://sites.google.com/view/pishield/home
 links:
   email: sarah.johnson@gmail.com
   twitter: sarahjohnson
