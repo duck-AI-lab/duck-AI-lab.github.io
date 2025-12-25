@@ -11,44 +11,62 @@
 
 <div class="member-profile-card">
 
-    {% comment %} Calculate the link URL once {% endcomment %}
-    {% assign member_url = nil %}
+  {% comment %} --- LOGIC: Calculate the link URL --- {% endcomment %}
+  {% assign member_url = nil %}
 
-    {% comment %} 1. Check for top-level homepage (e.g., homepage: http...) {% endcomment %}
-    {% if member.homepage %}
-      {% assign member_url = member.homepage %}
+  {% if member.homepage %}
+    {% assign member_url = member.homepage %}
+  {% elsif member.links['home-page'] %}
+    {% assign member_url = member.links['home-page'] %}
+  {% elsif member.url and page.slug != member.slug %}
+    {% assign member_url = member.url | relative_url | uri_escape %}
+  {% endif %}
 
-    {% comment %} 2. Check for nested links (e.g., links: home-page: http...) {% endcomment %}
-    {% elsif member.links['home-page'] %}
-      {% assign member_url = member.links['home-page'] %}
+  {% comment %} --- IMAGE SECTION --- {% endcomment %}
+  {% if member.image %}
 
-    {% comment %} 3. Fallback to internal page, unless we are currently ON that page {% endcomment %}
-    {% elsif member.url %}
-      {% if page.slug != member.slug %}
-        {% assign member_url = member.url | relative_url | uri_escape %}
-      {% endif %}
+    {% comment %} 1. Start Link (if URL exists) {% endcomment %}
+    {% if member_url %}
+      <a href="{{ member_url }}" aria-label="{{ member.name }}" {% if member.homepage or member.links['home-page'] %}target="_blank" rel="noopener noreferrer"{% endif %}>
     {% endif %}
 
-    {% if member.name %}
-      {% if member_url %}
-        <a href="{{ member_url }}" class="member-link" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
-      {% endif %}
+      {% comment %} 2. The Image goes here! {% endcomment %}
+      <img
+        src="{{ member.image | relative_url | uri_escape }}"
+        alt="{{ member.name }}"
+        class="member-photo"
+      >
 
-        <h3 class="member-name">{{ member.name }}</h3>
-
-      {% if member_url %}
-        </a>
-      {% endif %}
+    {% comment %} 3. End Link (if URL exists) {% endcomment %}
+    {% if member_url %}
+      </a>
     {% endif %}
 
-    {% if member.role or member.affiliation %}
-      <div class="member-details">
-        {% if member.affiliation %}
-          <br><span class="member-org">{{ member.affiliation }}</span>
-        {% endif %}
-      </div>
+  {% endif %}
+
+
+  {% comment %} --- NAME SECTION --- {% endcomment %}
+  {% if member.name %}
+    {% if member_url %}
+      <a href="{{ member_url }}" class="member-link" {% if member.homepage or member.links['home-page'] %}target="_blank" rel="noopener noreferrer"{% endif %}>
     {% endif %}
-  </div>
+
+      <h3 class="member-name">{{ member.name }}</h3>
+
+    {% if member_url %}
+      </a>
+    {% endif %}
+  {% endif %}
+
+  {% if member.role or member.affiliation %}
+    <div class="member-details">
+      {% if member.affiliation %}
+        <br><span class="member-org">{{ member.affiliation }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div>
   <div class="member-biography">
     {% if member.content %}
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
