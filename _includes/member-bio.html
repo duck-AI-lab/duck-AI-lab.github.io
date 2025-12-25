@@ -15,7 +15,10 @@
 
     {% if member.image %}
       {% if page.slug != member.slug %}
+<a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" aria-label="{{ member.name }}">
+      {% comment %}
         <a href="{{ member.url | relative_url | uri_escape }}" aria-label="{{ member.name }}">
+      {% endcomment %}
       {% endif %}
 
         <img
