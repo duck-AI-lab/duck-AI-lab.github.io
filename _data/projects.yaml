@@ -1,7 +1,7 @@
 - title: "PiShield"
   subtitle: "A PyTorch Package for Learning with Requirements"
   group: featured
-  image: images/photo.jpg
+  image: images/projects/pishield_logo.png
   link: https://sites.google.com/view/pishield/home
   description: PiShield is the first package ever allowing for the integration of the requirements into the neural networks' topology, guaranteeing compliance with these requirements, regardless of input. Additionally, it allows for integrating requirements both at inference and/or training time, depending on the practitioners' needs.
   repo: mihaela-stoian/PiShield
@@ -11,7 +11,7 @@
 - title: "ROAD-R"
   subtitle: "The Autonomous Driving Dataset with Logical Requirements"
   group: featured
-  image: images/photo.jpg
+  image: images/projects/road_demo.gif
   link: https://github.com/EGiunchiglia/ROAD-R
   description: ROAD-R is an extension of the ROAD dataset with a set of 243 manually annotated requirements over the 41 labels grouped into agents, actions and locations. The requirements are written in propositional logic and express background knowledge applicable in autonomous driving scenarios.
   repo: EGiunchiglia/ROAD-R
