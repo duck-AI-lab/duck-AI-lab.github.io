@@ -488,16 +488,23 @@ BteeTvJOAMLkzVeN4zEvvgXDvKFyToQyDCctwGL07ReujAkpwZedtUjYivRMTeSshyt8VCsACroq
 
   <div class="member-profile-card">
 
-      
-
-       <a href="https://sites.google.com/view/pishield/home" aria-label="Jane Smith">
-        <img src="/images/photo.jpg" alt="Jane Smith" class="member-photo">
-        </a>
-
-
+    
     
       
-        <a href="/members/jane-smith.html" class="member-link">
+        <a href="https://sites.google.com/view/pishield/home" aria-label="Jane Smith" target="_blank" rel="noopener noreferrer">
+      
+
+        <img src="/images/photo.jpg" alt="Jane Smith" class="member-photo">
+
+      
+        </a>
+      
+    
+
+    
+    
+      
+        <a href="https://sites.google.com/view/pishield/home" class="member-link" target="_blank" rel="noopener noreferrer">
       
 
         <h3 class="member-name">Jane Smith</h3>
@@ -507,13 +514,13 @@ BteeTvJOAMLkzVeN4zEvvgXDvKFyToQyDCctwGL07ReujAkpwZedtUjYivRMTeSshyt8VCsACroq
       
     
 
-  
-    <div class="member-details">
-      
-    </div>
-  
+    
+      <div class="member-details">
+        
+      </div>
+    
+  </div>
 
-</div>
   <div class="member-biography">
     
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
@@ -536,11 +543,8 @@ Magna eget est lorem ipsum.
   .member-bio-container {
     display: flex;
     gap: 2rem;
-    /*margin-bottom: 4rem;*/
-    /*padding-bottom: 2rem;*/
-      margin-bottom: 2rem; /* Reduced from 4rem */
-    padding-bottom: 0;   /* Reduced from 2rem */
-    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 2rem;
+    padding-bottom: 0;
     align-items: flex-start;
   }
 
@@ -550,7 +554,7 @@ Magna eget est lorem ipsum.
     display: flex;
     flex-direction: column;
     text-align: center;
-      align-items: center; /* This forces the content to be perfectly centered */
+    align-items: center;
   }
 
   .member-photo {
@@ -560,12 +564,13 @@ Magna eget est lorem ipsum.
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Subtle zoom effect on hover */
+    transition: transform 0.2s;
   }
 
-  /* Hover effect for linked photo */
+  /* Hover effect for linked photo - ensures it works on the <a> wrapper */
   a:hover .member-photo {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   .member-name {
@@ -582,7 +587,7 @@ Magna eget est lorem ipsum.
   }
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3; /* Optional: Change color on hover */
+    color: #0056b3;
   }
 
   .member-details {
@@ -617,16 +622,23 @@ Magna eget est lorem ipsum.
 
   <div class="member-profile-card">
 
-      
-
-       <a href="https://sites.google.com/view/pishield/home" aria-label="Clara Jensen">
-        <img src="/images/photo.jpg" alt="Clara Jensen" class="member-photo">
-        </a>
-
-
+    
     
       
-        <a href="/members/clara-jensen.html" class="member-link">
+        <a href="https://sites.google.com/view/pishield/home" aria-label="Clara Jensen" target="_blank" rel="noopener noreferrer">
+      
+
+        <img src="/images/photo.jpg" alt="Clara Jensen" class="member-photo">
+
+      
+        </a>
+      
+    
+
+    
+    
+      
+        <a href="https://sites.google.com/view/pishield/home" class="member-link" target="_blank" rel="noopener noreferrer">
       
 
         <h3 class="member-name">Clara Jensen</h3>
@@ -636,13 +648,13 @@ Magna eget est lorem ipsum.
       
     
 
-  
-    <div class="member-details">
-      
-    </div>
-  
+    
+      <div class="member-details">
+        
+      </div>
+    
+  </div>
 
-</div>
   <div class="member-biography">
     
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
@@ -661,11 +673,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   .member-bio-container {
     display: flex;
     gap: 2rem;
-    /*margin-bottom: 4rem;*/
-    /*padding-bottom: 2rem;*/
-      margin-bottom: 2rem; /* Reduced from 4rem */
-    padding-bottom: 0;   /* Reduced from 2rem */
-    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 2rem;
+    padding-bottom: 0;
     align-items: flex-start;
   }
 
@@ -675,7 +684,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     display: flex;
     flex-direction: column;
     text-align: center;
-      align-items: center; /* This forces the content to be perfectly centered */
+    align-items: center;
   }
 
   .member-photo {
@@ -685,12 +694,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Subtle zoom effect on hover */
+    transition: transform 0.2s;
   }
 
-  /* Hover effect for linked photo */
+  /* Hover effect for linked photo - ensures it works on the <a> wrapper */
   a:hover .member-photo {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   .member-name {
@@ -707,7 +717,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3; /* Optional: Change color on hover */
+    color: #0056b3;
   }
 
   .member-details {
@@ -740,13 +750,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
   <div class="member-profile-card">
 
+    
+    
+      
+        <a href="/members/sarah-johnson.html" aria-label="Sarah Johnson">
       
 
-       <a href="" aria-label="Sarah Johnson">
         <img src="/images/photo.jpg" alt="Sarah Johnson" class="member-photo">
+
+      
         </a>
+      
+    
 
-
+    
     
       
         <a href="/members/sarah-johnson.html" class="member-link">
@@ -759,13 +776,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       
     
 
-  
-    <div class="member-details">
-      
-    </div>
-  
+    
+      <div class="member-details">
+        
+      </div>
+    
+  </div>
 
-</div>
   <div class="member-biography">
     
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
@@ -785,11 +802,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   .member-bio-container {
     display: flex;
     gap: 2rem;
-    /*margin-bottom: 4rem;*/
-    /*padding-bottom: 2rem;*/
-      margin-bottom: 2rem; /* Reduced from 4rem */
-    padding-bottom: 0;   /* Reduced from 2rem */
-    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 2rem;
+    padding-bottom: 0;
     align-items: flex-start;
   }
 
@@ -799,7 +813,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     display: flex;
     flex-direction: column;
     text-align: center;
-      align-items: center; /* This forces the content to be perfectly centered */
+    align-items: center;
   }
 
   .member-photo {
@@ -809,12 +823,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Subtle zoom effect on hover */
+    transition: transform 0.2s;
   }
 
-  /* Hover effect for linked photo */
+  /* Hover effect for linked photo - ensures it works on the <a> wrapper */
   a:hover .member-photo {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   .member-name {
@@ -831,7 +846,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3; /* Optional: Change color on hover */
+    color: #0056b3;
   }
 
   .member-details {
@@ -866,13 +881,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
   <div class="member-profile-card">
 
+    
+    
+      
+        <a href="/members/john-doe.html" aria-label="John Doe">
       
 
-       <a href="" aria-label="John Doe">
         <img src="/images/photo.jpg" alt="John Doe" class="member-photo">
+
+      
         </a>
+      
+    
 
-
+    
     
       
         <a href="/members/john-doe.html" class="member-link">
@@ -885,13 +907,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       
     
 
-  
-    <div class="member-details">
-      
-    </div>
-  
+    
+      <div class="member-details">
+        
+      </div>
+    
+  </div>
 
-</div>
   <div class="member-biography">
     
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
@@ -913,11 +935,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   .member-bio-container {
     display: flex;
     gap: 2rem;
-    /*margin-bottom: 4rem;*/
-    /*padding-bottom: 2rem;*/
-      margin-bottom: 2rem; /* Reduced from 4rem */
-    padding-bottom: 0;   /* Reduced from 2rem */
-    /*border-bottom: 1px solid #eee;*/
+    margin-bottom: 2rem;
+    padding-bottom: 0;
     align-items: flex-start;
   }
 
@@ -927,7 +946,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     display: flex;
     flex-direction: column;
     text-align: center;
-      align-items: center; /* This forces the content to be perfectly centered */
+    align-items: center;
   }
 
   .member-photo {
@@ -937,12 +956,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     border-radius: 50%;
     margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s; /* Subtle zoom effect on hover */
+    transition: transform 0.2s;
   }
 
-  /* Hover effect for linked photo */
+  /* Hover effect for linked photo - ensures it works on the <a> wrapper */
   a:hover .member-photo {
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   .member-name {
@@ -959,7 +979,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   }
   .member-link:hover {
     text-decoration: underline;
-    color: #0056b3; /* Optional: Change color on hover */
+    color: #0056b3;
   }
 
   .member-details {
