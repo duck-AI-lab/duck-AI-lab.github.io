@@ -13,10 +13,10 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 {% include section.html %}
 
 
-## All
+[//]: # (## All)
 
-[//]: # ({% include search-box.html %})
+{% include search-box.html %}
 
-[//]: # ({% include search-info.html %})
+{% include search-info.html %}
 
 {% include list.html data="citations" component="citation" style="rich" %}
