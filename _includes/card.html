@@ -1,5 +1,5 @@
 {{ " " }}
-<div class="card" data-style="{{ include.style }}">
+<div class="card" data-style="{{ include.style }}" style="min-width: 100%; width: 100%;">
   <a
     {% if include.link %}
       href="{{ include.link | relative_url | uri_escape }}"
@@ -11,6 +11,7 @@
       src="{{ include.image | relative_url | uri_escape }}"
       alt="{{ include.title | default: "card image" | regex_strip }}"
       loading="lazy"
+      style="width: 100%; height: auto; object-fit: cover; max-height: none;"
       {% include fallback.html %}
     >
   </a>
