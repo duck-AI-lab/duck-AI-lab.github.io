@@ -3,6 +3,8 @@
   <a
     {% if include.link %}
       href="{{ include.link | relative_url | uri_escape }}"
+      target="_blank"
+      rel="noopener noreferrer"
     {% endif %}
     aria-label="{{ include.title | default: "card link" | regex_strip }}"
     class="card-image"
@@ -21,6 +23,8 @@
       <a
         {% if include.link %}
           href="{{ include.link | relative_url | uri_escape }}"
+          target="_blank"
+          rel="noopener noreferrer"
         {% endif %}
         {% if include.tooltip %}
           data-tooltip="{{ include.tooltip | xml_escape }}"
