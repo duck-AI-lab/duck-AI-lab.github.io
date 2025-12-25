@@ -14,10 +14,9 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 [//]: # ({% include tags.html tags="publication, resource, website" %})
 
-{% include search-info.html %}
+[//]: # ({% include search-info.html %})
 
 {% include section.html %}
-
 
 {% include list.html component="card" data="projects" filter="group == 'featured'" %}
 
