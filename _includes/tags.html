@@ -17,6 +17,7 @@
       data-repo="{{ include.repo | xml_escape }}"
     {% endif %}
   >
+  {% comment %}
     {% for tag in tags %}
       <a
         href="{{ link | relative_url }}?search=&quot;tag: {{ tag }}&quot;"
@@ -26,5 +27,6 @@
         {{ tag }}
       </a>
     {% endfor %}
+  {% endcomment %}
   </div>
 {% endif %}
