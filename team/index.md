@@ -36,6 +36,9 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% endcomment %}
 
 
+{% include list.html data="members" component="member-bio" %}
+
+{% comment %}
 ## Principal Investigator
 {% include list.html data="members" component="member-bio" filter="role == 'professor'" %}
 
@@ -44,6 +47,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ## PhD Students
 {% include list.html data="members" component="member-bio" filter="role == 'phd'" %}
+{% endcomment %}
 
 
 {% comment %}
