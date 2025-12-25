@@ -97,7 +97,7 @@ twitter:
   link: https://twitter.com/$VALUE
 
 x:
-  icon: fa-brands fa-x
+  icon: fa-brands fa-x-twitter
   text: X
   tooltip: X
   link: https://x.com/$VALUE
