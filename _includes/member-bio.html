@@ -11,11 +11,19 @@
 
 <div class="member-bio-container">
 
-  <div class="member-profile-card">
+<div class="member-profile-card">
+
+    {% comment %} Calculate the link URL once {% endcomment %}
+    {% assign member_url = nil %}
+    {% if member.homepage %}
+      {% assign member_url = member.homepage %}
+    {% elsif member.url and page.slug != member.slug %}
+      {% assign member_url = member.url | relative_url | uri_escape %}
+    {% endif %}
 
     {% if member.image %}
-      {% if member.homepage or page.slug != member.slug %}
-        <a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" aria-label="{{ member.name }}">
+      {% if member_url %}
+        <a href="{{ member_url }}" aria-label="{{ member.name }}" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
       {% endif %}
 
         <img
@@ -24,19 +32,19 @@
           class="member-photo"
         >
 
-      {% if member.homepage or page.slug != member.slug %}
+      {% if member_url %}
         </a>
       {% endif %}
     {% endif %}
 
     {% if member.name %}
-      {% if member.homepage or page.slug != member.slug %}
-        <a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" class="member-link">
+      {% if member_url %}
+        <a href="{{ member_url }}" class="member-link" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
       {% endif %}
 
         <h3 class="member-name">{{ member.name }}</h3>
 
-      {% if member.homepage or page.slug != member.slug %}
+      {% if member_url %}
         </a>
       {% endif %}
     {% endif %}
@@ -49,7 +57,6 @@
       </div>
     {% endif %}
   </div>
-
   <div class="member-biography">
     {% if member.content %}
       <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
