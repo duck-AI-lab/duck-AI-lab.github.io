@@ -5,7 +5,7 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-# {% include icon.html icon="fa-solid fa-box" %}Projects
+# {% include icon.html icon="fa-solid fa-box-open" %}Projects
 
 [//]: # (# {% include icon.html icon="fa-solid fa-wrench" %}Projects)
 
@@ -18,12 +18,9 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include section.html %}
 
-## Featured
 
 {% include list.html component="card" data="projects" filter="group == 'featured'" %}
 
 {% include section.html %}
-
-## More
-
+ 
 {% include list.html component="card" data="projects" filter="!group" style="small" %}
