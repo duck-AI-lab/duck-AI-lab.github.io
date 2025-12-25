@@ -1,9 +1,7 @@
 ---
 ---
 
-# duck-AI-lab's Website
-
-An engaging 1-3 sentence description of your lab.
+Short description
 
 {% include section.html %}
 
