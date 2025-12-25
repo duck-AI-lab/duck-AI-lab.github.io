@@ -14,8 +14,8 @@
   <div class="member-profile-card">
 
     {% if member.image %}
-      {% if page.slug != member.slug %}
-<a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" aria-label="{{ member.name }}">
+      {% if member.homepage or page.slug != member.slug %}
+        <a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" aria-label="{{ member.name }}">
       {% endif %}
 
         <img
@@ -24,35 +24,25 @@
           class="member-photo"
         >
 
-      {% if page.slug != member.slug %}
+      {% if member.homepage or page.slug != member.slug %}
         </a>
       {% endif %}
     {% endif %}
 
     {% if member.name %}
-      {% if page.slug != member.slug %}
-<a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" class="member-link">
-
+      {% if member.homepage or page.slug != member.slug %}
+        <a href="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}" class="member-link">
       {% endif %}
 
         <h3 class="member-name">{{ member.name }}</h3>
 
-      {% if page.slug != member.slug %}
+      {% if member.homepage or page.slug != member.slug %}
         </a>
       {% endif %}
     {% endif %}
 
     {% if member.role or member.affiliation %}
       <div class="member-details">
-          {% comment %}
-
-        <span class="member-role">
-            {% if type.icon %}<i class="{{ type.icon }}"></i> {% endif %}
-            {{ member.description }}
-        </span>
-          {% endcomment %}
-
-
         {% if member.affiliation %}
           <br><span class="member-org">{{ member.affiliation }}</span>
         {% endif %}
@@ -62,12 +52,9 @@
 
   <div class="member-biography">
     {% if member.content %}
-      {% comment %}
-      {{ member.content | markdownify }}
-      {% endcomment %}
-<p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
-{{ member.content | markdownify | remove: "<p>" | remove: "</p>" }}
-</p>
+      <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
+        {{ member.content | markdownify | remove: "<p>" | remove: "</p>" }}
+      </p>
     {% elsif member.description %}
       {{ member.description | markdownify }}
     {% else %}
