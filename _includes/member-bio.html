@@ -47,7 +47,7 @@
   {% endif %}
     {% endcomment %}
 
-     <a href="{{ member.homepage }}" aria-label="{{ member.name }}">
+     <a href="{{ member.links['home-page'] }}" aria-label="{{ member.name }}">
       <img
         src="{{ member.image | relative_url | uri_escape }}"
         alt="{{ member.name }}"
