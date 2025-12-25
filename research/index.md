@@ -15,8 +15,10 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 [//]: # (## All)
 
+{% comment %}
 {% include search-box.html %}
 
 {% include search-info.html %}
+{% endcomment %}
 
 {% include list.html data="citations" component="citation" style="rich" %}
