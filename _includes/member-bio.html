@@ -1,12 +1,10 @@
 {% if include.lookup %}
-  {% assign member = site.members
-    | where_exp: "member", "member.slug == include.lookup"
-    | first
-  %}
+  {% assign member = site.members | where_exp: "m", "m.slug == include.lookup" | first %}
+{% elsif include.member %}
+  {% assign member = include.member %}
 {% else %}
   {% assign member = include %}
 {% endif %}
-
 {% assign type = site.data.types[member.role] %}
 
 <div class="member-bio-container">
@@ -15,25 +13,19 @@
 
     {% comment %} Calculate the link URL once {% endcomment %}
     {% assign member_url = nil %}
+
+    {% comment %} 1. Check for top-level homepage (e.g., homepage: http...) {% endcomment %}
     {% if member.homepage %}
       {% assign member_url = member.homepage %}
-    {% elsif member.url and page.slug != member.slug %}
-      {% assign member_url = member.url | relative_url | uri_escape %}
-    {% endif %}
 
-    {% if member.image %}
-      {% if member_url %}
-        <a href="{{ member_url }}" aria-label="{{ member.name }}" {% if member.homepage %}target="_blank" rel="noopener noreferrer"{% endif %}>
-      {% endif %}
+    {% comment %} 2. Check for nested links (e.g., links: home-page: http...) {% endcomment %}
+    {% elsif member.links['home-page'] %}
+      {% assign member_url = member.links['home-page'] %}
 
-        <img
-          src="{{ member.image | relative_url | uri_escape }}"
-          alt="{{ member.name }}"
-          class="member-photo"
-        >
-
-      {% if member_url %}
-        </a>
+    {% comment %} 3. Fallback to internal page, unless we are currently ON that page {% endcomment %}
+    {% elsif member.url %}
+      {% if page.slug != member.slug %}
+        {% assign member_url = member.url | relative_url | uri_escape %}
       {% endif %}
     {% endif %}
 
