@@ -43,10 +43,14 @@
 
     {% if member.role or member.affiliation %}
       <div class="member-details">
+          {% comment %}
+
         <span class="member-role">
             {% if type.icon %}<i class="{{ type.icon }}"></i> {% endif %}
             {{ member.description }}
         </span>
+          {% endcomment %}
+
 
         {% if member.affiliation %}
           <br><span class="member-org">{{ member.affiliation }}</span>
