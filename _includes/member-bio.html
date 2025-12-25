@@ -5,68 +5,51 @@
 {% else %}
   {% assign member = include %}
 {% endif %}
+
 {% assign type = site.data.types[member.role] %}
 
 <div class="member-bio-container">
 
-<div class="member-profile-card">
+  <div class="member-profile-card">
 
-  {% comment %} --- LOGIC: Calculate the link URL --- {% endcomment %}
-  {% assign member_url = nil %}
+      {% comment %}
+    {% if member.image %}
+      {% if page.slug != member.slug %}
+        <a href="{{ member.url | relative_url | uri_escape }}" aria-label="{{ member.name }}">
+      {% endif %}
 
-  {% if member.homepage %}
-    {% assign member_url = member.homepage %}
-  {% elsif member.links['home-page'] %}
-    {% assign member_url = member.links['home-page'] %}
-  {% elsif member.url and page.slug != member.slug %}
-    {% assign member_url = member.url | relative_url | uri_escape %}
-  {% endif %}
+        <img
+          src="{{ member.image | relative_url | uri_escape }}"
+          alt="{{ member.name }}"
+          class="member-photo"
+        >
 
-  {% comment %} --- IMAGE SECTION --- {% endcomment %}
-
-    {% comment %}
-  {% if member.image %}
-
-    {% comment %} 1. Start Link (if URL exists) {% endcomment %}
-    {% if member_url %}
-      <a href="{{ member_url }}" aria-label="{{ member.name }}" {% if member.homepage or member.links['home-page'] %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      {% if page.slug != member.slug %}
+        </a>
+      {% endif %}
     {% endif %}
-
-      {% comment %} 2. The Image goes here! {% endcomment %}
-      <img
-        src="{{ member.image | relative_url | uri_escape }}"
-        alt="{{ member.name }}"
-        class="member-photo"
-      >
-
-    {% comment %} 3. End Link (if URL exists) {% endcomment %}
-    {% if member_url %}
-      </a>
-    {% endif %}
-
-  {% endif %}
     {% endcomment %}
 
-     <a href="{{ member.links['home-page'] }}" aria-label="{{ member.name }}">
-      <img
-        src="{{ member.image | relative_url | uri_escape }}"
-        alt="{{ member.name }}"
-        class="member-photo"
-      >
-      </a>
+       <a href="{{ member.homepage }}" aria-label="{{ member.name }}">
+        <img
+          src="{{ member.image | relative_url | uri_escape }}"
+          alt="{{ member.name }}"
+          class="member-photo"
+        >
+        </a>
 
-  {% comment %} --- NAME SECTION --- {% endcomment %}
-  {% if member.name %}
-    {% if member_url %}
-      <a href="{{ member_url }}" class="member-link" {% if member.homepage or member.links['home-page'] %}target="_blank" rel="noopener noreferrer"{% endif %}>
+
+    {% if member.name %}
+      {% if page.slug != member.slug %}
+        <a href="{{ member.url | relative_url | uri_escape }}" class="member-link">
+      {% endif %}
+
+        <h3 class="member-name">{{ member.name }}</h3>
+
+      {% if page.slug != member.slug %}
+        </a>
+      {% endif %}
     {% endif %}
-
-      <h3 class="member-name">{{ member.name }}</h3>
-
-    {% if member_url %}
-      </a>
-    {% endif %}
-  {% endif %}
 
   {% if member.role or member.affiliation %}
     <div class="member-details">
