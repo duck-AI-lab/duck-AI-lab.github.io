@@ -13,7 +13,7 @@
       src="{{ include.image | relative_url | uri_escape }}"
       alt="{{ include.title | default: "card image" | regex_strip }}"
       loading="lazy"
-      style="width: 100%; height: auto; object-fit: cover; max-height: none;"
+      style="width: 100%; height: auto; max-height: none; object-fit: {% if include.style == 'contain' %}contain{% else %}cover{% endif %};"
       {% include fallback.html %}
     >
   </a>
