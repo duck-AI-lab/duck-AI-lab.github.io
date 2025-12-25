@@ -19,7 +19,7 @@
       {% endif %}
 
         <img
-          src="{{ member.image | relative_url | uri_escape }}"
+          src="{% if member.homepage %}{{ member.homepage }}{% else %}{{ member.url | relative_url | uri_escape }}{% endif %}"
           alt="{{ member.name }}"
           class="member-photo"
         >
