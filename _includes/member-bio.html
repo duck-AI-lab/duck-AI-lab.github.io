@@ -23,6 +23,8 @@
   {% endif %}
 
   {% comment %} --- IMAGE SECTION --- {% endcomment %}
+
+    {% comment %}
   {% if member.image %}
 
     {% comment %} 1. Start Link (if URL exists) {% endcomment %}
@@ -43,7 +45,15 @@
     {% endif %}
 
   {% endif %}
+    {% endcomment %}
 
+     <a href="{{ member.homepage }}" aria-label="{{ member.name }}">
+      <img
+        src="{{ member.image | relative_url | uri_escape }}"
+        alt="{{ member.name }}"
+        class="member-photo"
+      >
+      </a>
 
   {% comment %} --- NAME SECTION --- {% endcomment %}
   {% if member.name %}
