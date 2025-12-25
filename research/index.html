@@ -498,24 +498,14 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   <size></size>
 -->
 
-<h2 id="all">All</h2>
+<div class="search-box">
+  <input type="text" class="search-input" oninput="onSearchInput(this)" placeholder="Search items on this page">
+  <button disabled data-tooltip="Clear search" aria-label="clear search" onclick="onSearchClear()">
+    <i class="icon fa-solid fa-magnifying-glass"></i>
+  </button>
+</div>
 
-<p><input type="text" class="search-input" oninput="onSearchInput(this)" placeholder="Search items on this page">
-  &lt;button
-    disabled
-    data-tooltip=”Clear search”
-    aria-label=”clear search”
-    onclick=”onSearchClear()”</p>
-<blockquote>
-
-  <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>&lt;i class="icon fa-solid fa-magnifying-glass"&gt;&lt;/i&gt;   &lt;/button&gt;
-</code></pre></div>  </div>
-</blockquote>
-<p>&lt;/div&gt;
-)</p>
-
-<p>)</p>
+<div class="search-info"></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h3 id="2025"&gt;2025&lt;/h3&gt;
 </code></pre></div></div>
