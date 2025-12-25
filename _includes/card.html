@@ -36,7 +36,12 @@
     {% endif %}
 
     {% if include.subtitle %}
+      {% comment %}
       <span class="card-subtitle">{{ include.subtitle }}</span>
+      {% endcomment %}
+      <span class="card-subtitle" style="display: block; text-align: center; line-height: 1.4; margin-bottom: 0.2rem;">
+        {{ include.subtitle }}
+      </span>
     {% endif %}
 
     {% if include.description %}
