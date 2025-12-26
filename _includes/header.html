@@ -1,7 +1,17 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: false %}
 
-{% assign logo = "images/cropped_header_logo1.png" %}
+<!--{% assign logo = "images/cropped_header_logo1.png" %}-->
+
+{% assign logo_cropped = "images/cropped_header_logo1.png" | file_exists %}
+{% assign logo_full = "images/logo.svg" | file_exists %}
+
+{% if page.url == "/" %}
+  {% assign logo = logo_full %}
+{% else %}
+  {% assign logo = logo_cropped %}
+{% endif %}
+
 
 <header
   {% if dark == true or dark == false %}
