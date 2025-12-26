@@ -504,12 +504,14 @@ BteeTvJOAMLkzVeN4zEvvgXDvKFyToQyDCctwGL07ReujAkpwZedtUjYivRMTeSshyt8VCsACroq
   </div>
 </div>
 
-<div class="feature-container" style="display: flex; flex-direction: row-reverse; gap: 2rem; align-items: center; margin: 4rem 0;">
+<div class="feature-container" style="display: flex; flex-direction: row-reverse; gap: 3rem; align-items: center; margin: 4rem 0 6rem 0;">
   
-  <div class="feature-image" style="flex: 1; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <div class="feature-image-stack" style="flex: 1; position: relative;">
     <a href="projects" style="display: block; position: relative;">
-      <img src="images/projects/road_demo.gif" alt="ROAD-R Demo" style="width: 100%; display: block; opacity: 0.9;">
-      <img src="images/projects/pishield_logo.png" alt="PiShield Logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));">
+      
+      <img src="images/projects/road_demo.gif" alt="ROAD-R Demo" style="width: 100%; display: block; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      
+      <img src="images/projects/pishield_logo.png" alt="PiShield Logo" style="position: absolute; bottom: -25px; right: -25px; width: 40%; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)); border-radius: 12px; border: 2px solid white;">
     </a>
   </div>
 
@@ -540,6 +542,14 @@ BteeTvJOAMLkzVeN4zEvvgXDvKFyToQyDCctwGL07ReujAkpwZedtUjYivRMTeSshyt8VCsACroq
     .feature-container {
       flex-direction: column !important;
       text-align: center;
+      /* Reset margin on mobile */
+      margin-bottom: 4rem !important;
+    }
+    /* On mobile, center the stack and reduce offset so it doesn't go offscreen */
+    .feature-image-stack img:nth-child(2) {
+        bottom: -15px !important;
+        right: -10px !important;
+        width: 35% !important;
     }
   }
 </style>
