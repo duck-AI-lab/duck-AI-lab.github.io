@@ -1,13 +1,10 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: false %}
 
-<!--{% assign svg = "images/logo.svg" | file_exists %}-->
-<!--{% assign png = "images/cropped_header_logo1.png" | file_exists %}-->
-<!--{% assign jpg = "images/logo.jpg" | file_exists %}-->
-<!--{% assign logo = png | default: svg | default: jpg | default: nil %}-->
-
-{% assign logo = "images/cropped_header_logo1.png" %}
-
+{% assign svg = "images/logo.svg" | file_exists %}
+{% assign png = "images/logo.png" | file_exists %}
+{% assign jpg = "images/logo.jpg" | file_exists %}
+{% assign logo = svg | default: png | default: jpg | default: nil %}
 
 <header
   {% if dark == true or dark == false %}
@@ -16,37 +13,33 @@
   {% if page.url == "/" %}
     data-big
   {% endif %}
-
-  /* UPDATED SHADOW:
+ /* UPDATED SHADOW:
      - box-shadow: 0 4px 20px rgba(0,0,0,0.4);
        (4px down, 20px blur, 40% opacity black)
   */
   style="background: #000000; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); padding: 0; display: flex; align-items: stretch; height: auto !important;"
 >
 
-  /* 1. MAIN HEADER: Black background, flex layout to stretch items */
-  style="background: #000000; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 0; display: flex; align-items: stretch; height: auto !important;"
->
 
-  <a href="{{ "/" | relative_url }}" class="home" style="background: #ffffff; color: #000000; display: flex; align-items: center; text-decoration: none; padding: 5px 20px; height: auto;">
 
+
+  <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
-      <span class="logo" style="width: 120px; max-height: none; height: auto; display: block; margin-right: 10px; line-height: 0;">
+      <span class="logo" style="width: 120px; max-height: none; height: auto; display: flex; align-items: center;">
         {% if svg %}
           {{ svg | file_read }}
         {% else %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none; display: block;">
+          <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none;">
         {% endif %}
       </span>
     {% endif %}
-
     {% if site.logo-text != false %}
-      <span class="title-text" data-tooltip="Home" style="color: #000000;">
+      <span class="title-text" data-tooltip="Home">
         {% if site.title and site.show-title != false %}
-          <span class="title" style="color: #000000;">{{ site.title }}</span>
+          <span class="title">{{ site.title }}</span>
         {% endif %}
         {% if site.subtitle and site.show-subtitle != false %}
-          <span class="subtitle" style="color: #000000;">{{ site.subtitle }}</span>
+          <span class="subtitle">{{ site.subtitle }}</span>
         {% endif %}
       </span>
     {% endif %}
@@ -54,7 +47,7 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav style="margin-left: auto; display: flex; align-items: center; padding-right: 20px;">
+  <nav>
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
@@ -64,7 +57,6 @@
         <a
           href="{{ page.dir | relative_url | uri_escape }}"
           data-tooltip="{{ page.nav.tooltip | xml_escape }}"
-          style="color: #ffffff !important; opacity: 0.9;"
         >
           {{ page.title }}
         </a>
