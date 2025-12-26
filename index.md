@@ -6,12 +6,10 @@
   <div style="flex: 1; min-width: 300px; text-align: left;">
         <h1 style="margin-top: 0; text-align: left;">About</h1>
         <p>
-                    Lab description, methods, aims.
-                    Keywords
-
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.
         </p>
         <p>
-          More details.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus purus in massa tempor nec feugiat nisl pretium fusce.  
         </p>
   </div>
 
