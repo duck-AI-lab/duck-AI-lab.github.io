@@ -23,24 +23,27 @@ nav:
 {% endcomment %}
 
 
- 
 {% assign citations = site.data.citations %}
+{% assign years_to_display = "2026,2025,2024,2023,2022" | split: "," %}
 
-{% comment %} 1. Group citations by Year (2025, 2024...) {% endcomment %}
-{% assign grouped_citations = citations 
-  | group_by_exp: "item", "item.date | date: '%Y'" 
-  | sort: "name" 
-  | reverse 
-%}
-
-{% comment %} 2. Loop through each Year {% endcomment %}
-{% for year in grouped_citations %}
+{% for year in years_to_display %}
   
-  <h2 id="{{ year.name }}" style="margin-top: 40px; margin-bottom: 20px;">{{ year.name }}</h2>
-
+  {% comment %} Check if there are any papers for this year {% endcomment %}
+  {% assign current_year_papers = citations | where_exp: "item", "item.date contains year" %}
   
-  {% for work in year.items %}
-    {% include citation.html lookup=work.id style="rich" %}
-  {% endfor %}
+  {% if current_year_papers.size > 0 %}
+    <h2 id="{{ year }}" style="margin-top: 40px; margin-bottom: 20px;">{{ year }}</h2>
+    
+    {% comment %} 
+      Loop through the ORIGINAL citations.yaml to find matches.
+      This ensures we strictly preserve the order from the file.
+    {% endcomment %}
+    {% for work in citations %}
+      {% assign work_year = work.date | slice: 0, 4 %}
+      {% if work_year == year %}
+        {% include citation.html lookup=work.id style="rich" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
 {% endfor %}

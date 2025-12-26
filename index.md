@@ -73,7 +73,7 @@ About DUCK LAB
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/group_photo.jpeg"
   link="team"
   title="Team"
   text=text
