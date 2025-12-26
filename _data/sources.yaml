@@ -60,3 +60,17 @@
     - type: source
       text: Code
       link: https://github.com/salijona/C-AdvDGM
+
+
+- id: doi:10.48550/arXiv.2402.18285
+  type: paper
+  image: /images/research/pishield_demo.png
+  description: We introduce PiShield, the first package ever allowing for the integration of (propositional or linear) requirements into the neural networks’ topology. PiShield guarantees compliance with these requirements, regardless of input.
+  publisher: IJCAI
+  buttons:
+    - type: source
+      text: Code
+      link: https://github.com/mihaela-stoian/PiShield
+    - type: website
+      text: Website
+      link: https://sites.google.com/view/pishield/home
