@@ -5,8 +5,9 @@ nav:
   tooltip: About the team
 ---
 
-# Team
 {% comment %}
+# Team
+
 # {% include icon.html icon="fa-solid fa-users" %}People
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
