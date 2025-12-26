@@ -4,7 +4,7 @@
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 60px;">
   
   <div style="flex: 1; min-width: 300px; text-align: left;">
-        <h1 style="margin-top: 0;">About</h1>
+        <h1 style="margin-top: 0; text-align: left;">About</h1>
         <p>
                     Lab description, methods, aims.
                     Keywords
