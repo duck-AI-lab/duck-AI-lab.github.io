@@ -1,7 +1,12 @@
 - id: doi:10.48550/arXiv.2402.04823
+  type: paper
   image: images/research/DRL.png
+  publisher: ICLR
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: mihaela-stoian/ConstrainedDGM
+  buttons:
+    - type: source
+      text: Code
+      link: https://github.com/mihaela-stoian/ConstrainedDGM
 
 - id: doi:10.48550/arXiv.2502.18237
   type: paper

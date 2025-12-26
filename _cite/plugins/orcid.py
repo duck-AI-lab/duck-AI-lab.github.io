@@ -17,8 +17,8 @@ def main(entry):
     # get id from entry
     _id = get_safe(entry, "orcid", "")
     if not _id:
+        return []
         raise Exception('No "orcid" key')
-
     # query api
     @log_cache
     @cache.memoize(name=__file__, expire=1 * (60 * 60 * 24))

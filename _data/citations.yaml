@@ -1,193 +1,5 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1007/s10994-023-06322-z
-  title: 'ROAD-R: the autonomous driving dataset with logical requirements'
-  authors:
-  - Eleonora Giunchiglia
-  - "Mihaela C\u0103t\u0103lina Stoian"
-  - Salman Khan
-  - Fabio Cuzzolin
-  - Thomas Lukasiewicz
-  publisher: Machine Learning
-  date: '2023-05-01'
-  link: https://doi.org/gs28c9
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1109/csr57506.2023.10225000
-  title: 'To TTP or not to TTP?: Exploiting TTPs to Improve ML-based Malware Detection'
-  authors:
-  - Yashovardhan Sharma
-  - Eleonora Giunchiglia
-  - Simon Birnbach
-  - Ivan Martinovic
-  publisher: 2023 IEEE International Conference on Cyber Security and Resilience (CSR)
-  date: '2023-07-31'
-  link: https://doi.org/hbg46s
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: Exploiting T-norms for Deep Learning in Autonomous Driving
-  publisher: "Proceedings of the 17th International Workshop on Neural-Symbolic\n\
-    \                  Learning and Reasoning, La Certosa di Pontignano, Siena, Italy,\
-    \ July\n                  3-5, 2023"
-  date: '2023-09-12'
-  link: https://ceur-ws.org/Vol-3432/paper31.pdf
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: 'Machine Learning with Requirements: a Manifesto'
-  publisher: arXiv preprint arXiv:2304.03674
-  date: '2023-09-14'
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.24963/ijcai.2022/767
-  title: Deep Learning with Logical Constraints
-  authors:
-  - Eleonora Giunchiglia
-  - Mihaela Catalina Stoian
-  - Thomas Lukasiewicz
-  publisher: Proceedings of the Thirty-First International Joint Conference on Artificial
-    Intelligence
-  date: '2022-07-01'
-  link: https://doi.org/gr4v7b
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1613/jair.1.12850
-  title: Multi-Label Classification Neural Networks with Hard Logical Constraints
-  authors:
-  - Eleonora Giunchiglia
-  - Thomas Lukasiewicz
-  publisher: Journal of Artificial Intelligence Research
-  date: '2021-11-09'
-  link: https://doi.org/hbg46t
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1145/3459637.3482218
-  title: Lightweight Visual Question Answering using Scene Graphs
-  authors:
-  - Sai Vidyaranya Nuthalapati
-  - Ramraj Chandradevan
-  - Eleonora Giunchiglia
-  - Bowen Li
-  - Maxime Kayser
-  - Thomas Lukasiewicz
-  - Carl Yang
-  publisher: Proceedings of the 30th ACM International Conference on Information &amp;
-    Knowledge Management
-  date: '2021-10-26'
-  link: https://doi.org/hbg46v
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1109/icmla51294.2020.00014
-  title: Knowledge Graph Extraction from Videos
-  authors:
-  - Louis Mahon
-  - Eleonora Giunchiglia
-  - Bowen Li
-  - Thomas Lukasiewicz
-  publisher: 2020 19th IEEE International Conference on Machine Learning and Applications
-    (ICMLA)
-  date: '2020-12-01'
-  link: https://doi.org/hbg46w
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: Coherent Hierarchical Multi-Label Classification Networks
-  publisher: Advances in Neural Information Processing Systems
-  date: '2023-09-12'
-  link: https://proceedings.neurips.cc/paper_files/paper/2020/file/6dd4e10e3296fa63738371ec0d5df818-Paper.pdf
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: 'The struggles of feature-based explanations: Shapley values vs. minimal
-    sufficient subsets'
-  publisher: AAAI Explainable Agency in Artificial Intelligence Workshop 2021
-  date: '2023-09-14'
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1109/smc.2019.8914358
-  title: 'Conditional Behavior Trees: Definition, Executability, and Applications'
-  authors:
-  - Eleonora Giunchiglia
-  - Michele Colledanchise
-  - Lorenzo Natale
-  - Armando Tacchella
-  publisher: 2019 IEEE International Conference on Systems, Man and Cybernetics (SMC)
-  date: '2019-10-01'
-  link: https://doi.org/g5j9zr
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1145/3310013.3322175
-  title: Engineering Multi-Agent Systems
-  authors:
-  - Viviana Mascardi
-  - Danny Weyns
-  - Alessandro Ricci
-  - Clara Benac Earle
-  - Arthur Casals
-  - Moharram Challenger
-  - Amit Chopra
-  - Andrei Ciortea
-  - Louise A. Dennis
-  - "\xC1lvaro Fern\xE1ndez D\xEDaz"
-  - Amal El Fallah-Seghrouchni
-  - Angelo Ferrando
-  - "Lars-\xC5ke Fredlund"
-  - Eleonora Giunchiglia
-  - Zahia Guessoum
-  - "Akin G\xFCnay"
-  - Koen Hindriks
-  - Carlos A. Iglesias
-  - Brian Logan
-  - Timotheus Kampik
-  - Geylani Kardas
-  - Vincent J. Koeman
-  - John Bruntse Larsen
-  - Simon Mayer
-  - "Tasio M\xE9ndez"
-  - Juan Carlos Nieves
-  - Valeria Seidita
-  - Baris Tekin Teze
-  - "L\xE1szl\xF3 Z. Varga"
-  - Michael Winikoff
-  publisher: ACM SIGSOFT Software Engineering Notes
-  date: '2019-03-25'
-  link: https://doi.org/g9xbbk
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: Can I trust the explainer? Verifying post-hoc explanatory methods.
-  publisher: NeurIPS 2019 Workshop on Safety and Robustness in Decision Making, Vancouver,
-    Canada
-  date: '2023-09-14'
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- title: Computing the Initial Requirements in Conditioned Behavior Trees
-  publisher: 6th International Workshop on Engineering Multi-Agent Systems (EMAS 2018)
-  date: '2023-09-14'
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1007/978-3-030-01424-7_3
-  title: 'RNN-SURV: A Deep Recurrent Model for Survival Analysis'
-  authors:
-  - Eleonora Giunchiglia
-  - Anton Nemchenko
-  - Mihaela van der Schaar
-  publisher: Lecture Notes in Computer Science
-  date: '2018-01-01'
-  link: https://doi.org/gnnsds
-  orcid: 0000-0001-9313-753X
-  plugin: orcid.py
-  file: orcid.yaml
 - id: doi:10.48550/arXiv.2402.04823
   title: How Realistic Is Your Synthetic Data? Constraining Deep Generative Models
     for Tabular Data
@@ -197,13 +9,17 @@
   - Maxime Cordy
   - Thomas Lukasiewicz
   - Eleonora Giunchiglia
-  publisher: arXiv
+  publisher: ICLR
   date: '2024-01-01'
   link: https://doi.org/hbg46z
+  type: paper
   image: images/research/DRL.png
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  repo: mihaela-stoian/ConstrainedDGM
+  buttons:
+  - type: source
+    text: Code
+    link: https://github.com/mihaela-stoian/ConstrainedDGM
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2502.18237
@@ -212,8 +28,8 @@
   authors:
   - "Mihaela C\u0103t\u0103lina Stoian"
   - Eleonora Giunchiglia
-  publisher: arXiv
-  date: '2020-12-04'
+  publisher: ICLR
+  date: '2025-01-01'
   link: https://doi.org/hbg46k
   type: paper
   image: images/research/DRL.png
@@ -223,6 +39,5 @@
   - type: source
     text: Code
     link: https://github.com/mihaela-stoian/DRL_DGM
-  repo: mihaela-stoian/DRL_DGM
   plugin: sources.py
   file: sources.yaml

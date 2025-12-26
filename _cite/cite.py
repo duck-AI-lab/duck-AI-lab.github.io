@@ -68,7 +68,10 @@ for plugin in plugins:
                 expanded = import_module(f"plugins.{plugin.stem}").main(entry)
                 # check that plugin returned correct format
                 if not list_of_dicts(expanded):
-                    raise Exception(f"{plugin.stem} plugin didn't return list of dicts")
+                    if 'orcid' in plugin.stem:
+                        continue
+                    else:
+                        raise Exception(f"{plugin.stem} plugin didn't return list of dicts")
             # catch any plugin error
             except Exception as e:
                 # log detailed pre-formatted/colored trace
