@@ -4,13 +4,14 @@
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 60px;">
   
   <div style="flex: 1; min-width: 300px;">
-        <h1 style="margin-top: 0;">Welcome to the Duck AI Lab</h1>
+        <h1 style="margin-top: 0;">About</h1>
         <p>
-          Put your group description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          We focus on neurosymbolic AI, deep generative models, and reasoning.
+                    Lab description1, methods, aims...
+                    Keywords
+
         </p>
         <p>
-          Our research aims to bridge the gap between...
+          Lab description2, methods, aims...
         </p>
   </div>
 
