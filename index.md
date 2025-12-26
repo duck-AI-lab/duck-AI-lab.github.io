@@ -3,7 +3,7 @@
 
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 60px;">
   
-  <div style="flex: 1; min-width: 300px;">
+  <div style="flex: 1; min-width: 300px; text-align: left;">
         <h1 style="margin-top: 0;">About</h1>
         <p>
                     Lab description, methods, aims.
@@ -25,10 +25,16 @@
 
 </div>
 
-
+{% comment %}
 <h2 style="border-bottom: 2px solid #f2f2f2; padding-bottom: 10px;">
   {% include icon.html icon="fa-solid fa-newspaper" %} Recent News
 </h2>
+{% endcomment %}
+
+<h1 style="margin-top: 60px; border-bottom: 2px solid #f2f2f2; padding-bottom: 10px;">
+  {% include icon.html icon="fa-solid fa-newspaper" %} Recent News
+</h1>
+
 
 <div class="news-list">
   {% for item in site.data.news %}
