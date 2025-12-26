@@ -56,6 +56,8 @@
 
     {% if member.role or member.affiliation %}
       <div class="member-details">
+          <span class="portrait-description">{{ member.description | default: type.description }}</span>
+
         {% if member.affiliation %}
           <br><span class="member-org">{{ member.affiliation }}</span>
         {% endif %}
