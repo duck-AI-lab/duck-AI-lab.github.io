@@ -23,9 +23,10 @@ nav:
 {% endcomment %}
 
 
+ 
 {% assign citations = site.data.citations %}
 
-{% comment %} 1. Group citations by Year {% endcomment %}
+{% comment %} 1. Group citations by Year (2025, 2024...) {% endcomment %}
 {% assign grouped_citations = citations 
   | group_by_exp: "item", "item.date | date: '%Y'" 
   | sort: "name" 
@@ -37,10 +38,8 @@ nav:
   
   <h2 id="{{ year.name }}" style="margin-top: 40px; margin-bottom: 20px;">{{ year.name }}</h2>
 
-  {% comment %} 3. Sort papers within that year by date (newest first) {% endcomment %}
-  {% assign year_items = year.items | sort: "date" | reverse %}
-
-  {% for work in year_items %}
+  
+  {% for work in year.items %}
     {% include citation.html lookup=work.id style="rich" %}
   {% endfor %}
 
