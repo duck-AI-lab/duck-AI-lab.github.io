@@ -32,7 +32,7 @@ nav:
   {% assign current_year_papers = citations | where_exp: "item", "item.date contains year" %}
   
   {% if current_year_papers.size > 0 %}
-    <h2 id="{{ year }}" style="margin-top: 40px; margin-bottom: 20px;">{{ year }}</h2>
+<h2 id="{{ year }}" style="margin-top: 40px; margin-bottom: 20px;">{{ year }}</h2>
     
     {% comment %} 
       Loop through the ORIGINAL citations.yaml to find matches.
