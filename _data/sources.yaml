@@ -5,9 +5,9 @@
 
 - id: doi:10.48550/arXiv.2502.18237
   type: paper
-  date: 2020-12-4
   image: images/research/DRL.png
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  publisher: ICLR
   buttons:
     - type: source
       text: Code
