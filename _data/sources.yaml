@@ -1,3 +1,14 @@
+- id: doi:10.48550/arXiv.2510.25497
+  type: paper
+  image: /images/research/DRL.png
+  publisher: NeurIPS
+  description: Description
+  buttons:
+    - type: source
+      text: Code
+      link: https://github.com/Giotto-maker/r4rr
+
+
 - id: doi:10.48550/arXiv.2502.18237
   type: paper
   image: /images/research/DRL.png
