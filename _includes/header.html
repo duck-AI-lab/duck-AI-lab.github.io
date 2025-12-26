@@ -13,27 +13,21 @@
   {% if page.url == "/" %}
     data-big
   {% endif %}
-
-  /* HEADER STYLE:
-     - #f0f8ff: The blueish background.
-     - padding: 0px 20px: Removes vertical space, keeps side spacing.
-     - height: auto: Shrinks header to fit logo exactly.
-  */
-  style="background: #f0f8ff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 0px 20px; height: auto !important; display: flex; align-items: center;"
+  /* ADDED: Solid white background so content doesn't show through */
+  style="background: #e0ffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);"
 >
-  <a href="{{ "/" | relative_url }}" class="home" style="display: flex; align-items: center; text-decoration: none;">
+  <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
-      <span class="logo" style="width: 120px; max-height: none; height: auto; display: block; margin: 0; line-height: 0;">
+      <span class="logo" style="width: 120px; max-height: none; height: auto; display: flex; align-items: center;">
         {% if svg %}
           {{ svg | file_read }}
         {% else %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none; display: block;">
+          <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none;">
         {% endif %}
       </span>
     {% endif %}
-
     {% if site.logo-text != false %}
-      <span class="title-text" data-tooltip="Home" style="margin-left: 15px;">
+      <span class="title-text" data-tooltip="Home">
         {% if site.title and site.show-title != false %}
           <span class="title">{{ site.title }}</span>
         {% endif %}
@@ -46,7 +40,7 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav style="margin-left: auto;">
+  <nav>
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
