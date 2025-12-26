@@ -1,23 +1,16 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
+- id: doi:10.48550/arXiv.2402.04823
+  image: images/research/DRL.png
   description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
-
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+  repo: mihaela-stoian/ConstrainedDGM
 
 - id: doi:10.48550/arXiv.2502.18237
+  type: paper
+  date: 2020-12-4
   image: images/research/DRL.png
+  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  buttons:
+    - type: source
+      text: Code
+      link: https://github.com/mihaela-stoian/DRL_DGM
+  repo: mihaela-stoian/DRL_DGM
+
