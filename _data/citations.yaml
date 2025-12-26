@@ -13,9 +13,13 @@
   date: '2024-01-01'
   link: https://doi.org/hbg46z
   type: paper
-  image: images/research/DRL.png
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  image: /images/research/DRL.png
+  description: We introduce the Disjunctive Refinement Layer (DRL), a novel layer
+    designed to enforce the alignment of generated data with the background knowledge
+    specified in user-defined constraints. DRL is the first method able to automatically
+    make deep learning models inherently compliant with constraints as expressive
+    as quantifier-free linear formulas, which can define non-convex and even disconnected
+    spaces.
   buttons:
   - type: source
     text: Code
@@ -32,9 +36,11 @@
   date: '2025-01-01'
   link: https://doi.org/hbg46k
   type: paper
-  image: images/research/DRL.png
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  image: /images/research/DRL.png
+  description: We show how deep generative models for tabular data can be constrained
+    such that their generated samples are guaranteed to be compliant with given constraints.
+    This is achieved by automatically parsing the constraints and transforming them
+    into a Constraint Layer seamlessly integrated with the model.
   buttons:
   - type: source
     text: Code
