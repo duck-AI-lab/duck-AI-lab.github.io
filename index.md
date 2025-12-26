@@ -1,80 +1,56 @@
 ---
 ---
-About DUCK LAB
+
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 60px;">
+  
+  <div style="flex: 1; min-width: 300px;">
+        <h1 style="margin-top: 0;">Welcome to the Duck AI Lab</h1>
+        <p>
+          Put your group description text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          We focus on neurosymbolic AI, deep generative models, and reasoning.
+        </p>
+        <p>
+          Our research aims to bridge the gap between...
+        </p>
+  </div>
+
+  <div style="flex: 1; min-width: 300px;">
+        <img 
+          src="/images/group_photo.jpeg" 
+          alt="Duck Lab Group Photo" 
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+        >
+      </div>
+
+</div>
 
 
-{% comment %}
-{% include section.html %}
-## Highlights
-{% endcomment %}
+<h2 style="border-bottom: 2px solid #f2f2f2; padding-bottom: 10px;">
+  {% include icon.html icon="fa-solid fa-newspaper" %} Recent News
+</h2>
 
-{% capture text %}
-
-[//]: # (Recent publications.)
-
-{%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="research"
-  title="Research"
-  text=text
-%}
-
-{% capture text %}
-
-[//]: # (Developed projects.)
-
-{%
-  include button.html
-  link="projects"
-  text="Browse our projects"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="projects"
-  title="Projects"
-  flip=true
-  style="bare"
-  text=text
-%}
-
-{% capture text %}
-
-[//]: # (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.)
-
-{%
-  include button.html
-  link="team"
-  text="Meet the team"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/group_photo.jpeg"
-  link="team"
-  title="Team"
-  text=text
-%}
+<div class="news-list">
+  {% for item in site.data.news %}
+            <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              
+              <div style="font-size: 0.85rem; color: #888; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">
+                {{ item.date }}
+              </div>
+        
+              <h3 style="margin: 0 0 5px 0; font-size: 1.15rem;">
+                {{ item.title }}
+              </h3>
+        
+              {% if item.subtitle %}
+                <div style="font-size: 0.95rem; font-style: italic; color: #555; margin-bottom: 8px;">
+                  {{ item.subtitle }}
+                </div>
+              {% endif %}
+        
+              <div style="font-size: 1rem; line-height: 1.6;">
+                {{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}
+              </div>
+        
+            </div>
+  {% endfor %}
+</div>
