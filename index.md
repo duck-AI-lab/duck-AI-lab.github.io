@@ -46,9 +46,17 @@ About DUCK LAB
 
 {% endcapture %}
 
+{% comment %}
+  NOTE: We are injecting custom HTML into the 'image' parameter below.
+  We use single quotes ' inside the HTML styles to avoid breaking the double quoted " parameter.
+  - The container div sets relative positioning.
+  - The first img is the background GIF (road_demo.gif).
+  - The second img is the foreground PNG (pishield_logo.png), absolutely positioned in the center with a drop-shadow.
+{% endcomment %}
+
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="<div style='position: relative; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);'><img src='images/projects/road_demo.gif' style='width: 100%; display: block; opacity: 0.9;' alt='ROAD-R Demo'><img src='images/projects/pishield_logo.png' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));' alt='PiShield Logo'></div>"
   link="projects"
   title="Projects"
   flip=true
