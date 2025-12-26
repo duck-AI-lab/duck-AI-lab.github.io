@@ -1,17 +1,14 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: false %}
 
-<!--{% assign logo = "images/cropped_header_logo1.png" %}-->
-
 {% assign logo_cropped = "images/cropped_header_logo1.png" | file_exists %}
 {% assign logo_full = "images/logo.svg" | file_exists %}
 
 {% if page.url == "/" %}
   {% assign logo = logo_full %}
-{% else %}
+  {% assign logo_width = "180px" %}  {% else %}
   {% assign logo = logo_cropped %}
-{% endif %}
-
+  {% assign logo_width = "70px" %}   {% endif %}
 
 <header
   {% if dark == true or dark == false %}
@@ -27,17 +24,12 @@
   style="background: #ffffff; position: relative; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); padding: 0 40px; display: flex; align-items: stretch; height: auto !important;"
 >
 
-
-
-
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
-      <span class="logo" style="width: 70px; max-height: none; height: auto; display: flex; align-items: center;">
-        {% if svg %}
-          {{ svg | file_read }}
-        {% else %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none;">
-        {% endif %}
+      <span class="logo" style="width: {{ logo_width }}; max-height: none; height: auto; display: flex; align-items: center;">
+
+        <img src="{{ logo | relative_url | uri_escape }}" alt="logo" style="width: 100%; height: auto; max-height: none;">
+
       </span>
     {% endif %}
     {% if site.logo-text != false %}
