@@ -67,7 +67,7 @@
 
   <div class="member-biography">
     {% if member.content %}
-      <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: #4a4a4a;">
+      <p style="text-align: left; line-height: 1.6; margin-top: 0.5rem; color: var(--gray);">
         {{ member.content | markdownify | remove: "<p>" | remove: "</p>" }}
       </p>
     {% elsif member.description %}
