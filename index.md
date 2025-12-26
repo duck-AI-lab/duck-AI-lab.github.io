@@ -35,24 +35,38 @@ About DUCK LAB
 
 [//]: # (Developed projects.)
 
-{%
-  include button.html
-  link="projects"
-  text="Browse our projects"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
+<div class="feature-container" style="display: flex; flex-direction: row-reverse; gap: 2rem; align-items: center; margin: 4rem 0;">
+  
+  <div class="feature-image" style="flex: 1; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <a href="projects" style="display: block; position: relative;">
+      <img src="images/projects/road_demo.gif" alt="ROAD-R Demo" style="width: 100%; display: block; opacity: 0.9;">
+      <img src="images/projects/pishield_logo.png" alt="PiShield Logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));">
+    </a>
+  </div>
 
-{% endcapture %}
+  <div class="feature-content" style="flex: 1; padding: 1rem;">
+    <h2 style="margin-top: 0;">Projects</h2>
+    
+    {%
+      include button.html
+      link="projects"
+      text="Browse our projects"
+      icon="fa-solid fa-arrow-right"
+      flip=true
+      style="bare"
+    %}
+  </div>
 
-{% comment %}
-  NOTE: We are injecting custom HTML into the 'image' parameter below.
-  We use single quotes ' inside the HTML styles to avoid breaking the double quoted " parameter.
-  - The container div sets relative positioning.
-  - The first img is the background GIF (road_demo.gif).
-  - The second img is the foreground PNG (pishield_logo.png), absolutely positioned in the center with a drop-shadow.
-{% endcomment %}
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .feature-container {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  }
+</style>
 
 {%
   include feature.html
