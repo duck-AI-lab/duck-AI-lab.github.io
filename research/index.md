@@ -13,6 +13,11 @@ nav:
 ## All
 {% include search-box.html %}
 {% include search-info.html %}
-{% endcomment %}
 
 {% include list.html data="citations" component="citation" style="rich" %}
+
+{% endcomment %}
+
+{% for work in site.data.citations %}
+  {% include citation.html lookup=work.id style="rich" %}
+{% endfor %}
