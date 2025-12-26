@@ -31,8 +31,8 @@
 </h2>
 {% endcomment %}
 
-<h1 style="margin-top: 60px; border-bottom: 2px solid #f2f2f2; padding-bottom: 10px;">
-  {% include icon.html icon="fa-solid fa-newspaper" %} Recent News
+<h1 style="margin-top: 60px; border-bottom: 2px solid #f2f2f2; padding-bottom: 10px; text-align: left;">
+ Recent News
 </h1>
 
 
