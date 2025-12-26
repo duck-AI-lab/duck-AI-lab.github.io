@@ -1,6 +1,6 @@
 - id: doi:10.48550/arXiv.2510.25497
   type: paper
-  image: /images/research/DRL.png
+  image: /images/research/r4rr.png
   publisher: NeurIPS
   description: Description
   buttons:
@@ -20,9 +20,29 @@
       link: https://github.com/mihaela-stoian/DRL_DGM
 
 
+- id: doi:10.48550/arXiv.2508.21787
+  type: paper
+  image: /images/research/picsar.png
+  description: Description
+  publisher: preprint
+  buttons:
+    - type: source
+      text: Code
+      link: https://doi.org/10.48550/arXiv.2508.21787
+
+
+
+- id: doi:10.48550/arXiv.2503.05954
+  type: paper
+  image: /images/research/survey_tab_synth.png
+  description: "We review deep generative modelling approaches for tabular data from the perspective of four types of requirements: utility of the synthetic data, alignment of the synthetic data with domain-specific knowledge, statistical fidelity of the synthetic data distribution compared to the real data distribution, and privacy-preserving capabilities."
+  publisher: preprint
+
+
+
 - id: doi:10.48550/arXiv.2402.04823
   type: paper
-  image: /images/research/DRL.png
+  image: /images/research/dgm+ll.png
   publisher: ICLR
   description: We show how deep generative models for tabular data can be constrained such that their generated samples are guaranteed to be compliant with given constraints. This is achieved by automatically parsing the constraints and transforming them into a Constraint Layer seamlessly integrated with the model.
   buttons:
@@ -30,3 +50,13 @@
       text: Code
       link: https://github.com/mihaela-stoian/ConstrainedDGM
 
+
+- id: doi:10.48550/arXiv.2409.12642
+  type: paper
+  image: /images/research/adv_gan.png
+  description: We adapt popular tabular deep generative models into adversarial models and evaluate their effectiveness in generating realistic adversarial examples that conform to domain constraints.
+  publisher: ICMLC
+  buttons:
+    - type: source
+      text: Code
+      link: https://github.com/salijona/C-AdvDGM
