@@ -2,7 +2,7 @@
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: false %}
 
 {% assign svg = "images/logo.svg" | file_exists %}
-{% assign png = "images/cropped_header_logo.png" | file_exists %}
+{% assign png = "images/cropped_header_logo1.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign logo = png | default: svg | default: jpg | default: nil %}
 
