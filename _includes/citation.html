@@ -18,6 +18,7 @@
         class="citation-image"
         aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
       >
+            {% comment %}
       <img
           src="/images/research/{{ citation.image | split: '/' | last }}"
           alt="{{ citation.title | default: "citation image" }}"
@@ -25,14 +26,13 @@
           style="max-width: 100%; height: auto;"
           onerror="this.style.display='none'"
         >
-      {% comment %}
+            {% endcomment %}
         <img
           src="{{ citation.image | relative_url | uri_escape }}"
           alt="{{ citation.title | default: "citation image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}
         >
-      {% endcomment %}
       </a>
     {% endif %}
 
