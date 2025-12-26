@@ -1,5 +1,28 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.48550/arXiv.2502.18237
+  title: 'Beyond the convexity assumption: Realistic tabular data generation under
+    quantifier-free real linear constraints'
+  authors:
+  - "Mihaela C\u0103t\u0103lina Stoian"
+  - Eleonora Giunchiglia
+  publisher: ICLR
+  date: '2025-01-01'
+  link: https://doi.org/hbg46k
+  type: paper
+  image: /images/research/DRL.png
+  description: We introduce the Disjunctive Refinement Layer (DRL), a novel layer
+    designed to enforce the alignment of generated data with the background knowledge
+    specified in user-defined constraints. DRL is the first method able to automatically
+    make deep learning models inherently compliant with constraints as expressive
+    as quantifier-free linear formulas, which can define non-convex and even disconnected
+    spaces.
+  buttons:
+  - type: source
+    text: Code
+    link: https://github.com/mihaela-stoian/DRL_DGM
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.48550/arXiv.2402.04823
   title: How Realistic Is Your Synthetic Data? Constraining Deep Generative Models
     for Tabular Data
@@ -14,29 +37,6 @@
   link: https://doi.org/hbg46z
   type: paper
   image: /images/research/DRL.png
-  description: We introduce the Disjunctive Refinement Layer (DRL), a novel layer
-    designed to enforce the alignment of generated data with the background knowledge
-    specified in user-defined constraints. DRL is the first method able to automatically
-    make deep learning models inherently compliant with constraints as expressive
-    as quantifier-free linear formulas, which can define non-convex and even disconnected
-    spaces.
-  buttons:
-  - type: source
-    text: Code
-    link: https://github.com/mihaela-stoian/ConstrainedDGM
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2502.18237
-  title: 'Beyond the convexity assumption: Realistic tabular data generation under
-    quantifier-free real linear constraints'
-  authors:
-  - "Mihaela C\u0103t\u0103lina Stoian"
-  - Eleonora Giunchiglia
-  publisher: ICLR
-  date: '2025-01-01'
-  link: https://doi.org/hbg46k
-  type: paper
-  image: /images/research/DRL.png
   description: We show how deep generative models for tabular data can be constrained
     such that their generated samples are guaranteed to be compliant with given constraints.
     This is achieved by automatically parsing the constraints and transforming them
@@ -44,6 +44,6 @@
   buttons:
   - type: source
     text: Code
-    link: https://github.com/mihaela-stoian/DRL_DGM
+    link: https://github.com/mihaela-stoian/ConstrainedDGM
   plugin: sources.py
   file: sources.yaml
