@@ -6,19 +6,19 @@
   <div style="flex: 1; min-width: 300px;">
         <h1 style="margin-top: 0;">About</h1>
         <p>
-                    Lab description1, methods, aims...
+                    Lab description, methods, aims.
                     Keywords
 
         </p>
         <p>
-          Lab description2, methods, aims...
+          More details.
         </p>
   </div>
 
   <div style="flex: 1; min-width: 300px;">
         <img 
           src="/images/group_photo.jpeg" 
-          alt="Duck Lab Group Photo" 
+          alt="DUCK Lab Group Photo" 
           style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
         >
       </div>
