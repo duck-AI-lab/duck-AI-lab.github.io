@@ -2,12 +2,12 @@
 ---
 About DUCK LAB
 
-
 {% comment %}
 {% include section.html %}
 ## Highlights
 {% endcomment %}
 
+{% comment %} --- 1. RESEARCH SECTION --- {% endcomment %}
 {% capture text %}
 
 [//]: # (Recent publications.)
@@ -31,9 +31,7 @@ About DUCK LAB
   text=text
 %}
 
-{% capture text %}
-
-[//]: # (Developed projects.)
+{% comment %} --- 2. PROJECTS SECTION (Custom HTML) --- {% endcomment %}
 
 <div class="feature-container" style="display: flex; flex-direction: row-reverse; gap: 2rem; align-items: center; margin: 4rem 0;">
   
@@ -46,6 +44,7 @@ About DUCK LAB
 
   <div class="feature-content" style="flex: 1; padding: 1rem;">
     <h2 style="margin-top: 0;">Projects</h2>
+    <p>Developed projects.</p>
     
     {%
       include button.html
@@ -68,16 +67,7 @@ About DUCK LAB
   }
 </style>
 
-{%
-  include feature.html
-  image="<div style='position: relative; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);'><img src='images/projects/road_demo.gif' style='width: 100%; display: block; opacity: 0.9;' alt='ROAD-R Demo'><img src='images/projects/pishield_logo.png' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));' alt='PiShield Logo'></div>"
-  link="projects"
-  title="Projects"
-  flip=true
-  style="bare"
-  text=text
-%}
-
+{% comment %} --- 3. TEAM SECTION --- {% endcomment %}
 {% capture text %}
 
 [//]: # (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.)
