@@ -14,7 +14,8 @@
      - box-shadow: 0 4px 20px rgba(0,0,0,0.4);
        (4px down, 20px blur, 40% opacity black)
   */
-  style="background: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); padding: 0; display: flex; align-items: stretch; height: auto !important;"
+    - padding: 0 40px;
+  style="background: #ffffff; position: relative; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.4); padding: 0; display: flex; align-items: stretch; height: auto !important;"
 >
 
 
@@ -22,7 +23,7 @@
 
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
-      <span class="logo" style="width: 120px; max-height: none; height: auto; display: flex; align-items: center;">
+      <span class="logo" style="width: 90px; max-height: none; height: auto; display: flex; align-items: center;">
         {% if svg %}
           {{ svg | file_read }}
         {% else %}
