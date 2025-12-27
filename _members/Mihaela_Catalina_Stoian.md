@@ -1,5 +1,5 @@
 ---
-name: Mihaela Catalina Stoian
+name: "Mihaela Catalina<br>Stoian"
 image: images/photo.jpg
 description: Research Associate
 role: postdoc
